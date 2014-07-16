@@ -28,8 +28,8 @@ var app = {
     		url: 'http://localhost:8182/discoveragent/upnp?actionparameters',
 		data:datos,
     		success: function(data) {
-			alert(data);
-			$('.response').append('<div>'+data+'</div>');
+			console.log(data);
+			//$('.response').append('<div>'+data+'</div>');
         	//it works, do something with the data
 	    },
 	    error: function() {
