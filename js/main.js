@@ -3,13 +3,13 @@ var app = {
     findByName: function() {
         console.log('findByName');
         this.store.findByName($('.search-key').val(), function(employees) {
-            var l = employees.length;
+            /*var l = employees.length;
             var e;
             $('.employee-list').empty();
             for (var i=0; i<l; i++) {
                 e = employees[i];
                 $('.employee-list').append('<li><a href="#employees/' + e.id + '">' + e.firstName + ' ' + e.lastName + '</a></li>');
-            }
+            }*/
         });
     },
 
@@ -27,7 +27,7 @@ var app = {
 		data:datos,
     		success: function(data) {
 			alert(data);
-			//$('.response').append('<div>'+data+'</div>');
+			$('.response').append('<div>'+data+'</div>');
         	//it works, do something with the data
 	    },
 	    error: function() {
