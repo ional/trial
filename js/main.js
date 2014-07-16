@@ -38,11 +38,9 @@ var app = {
 			console.log(data);
 			//$('.response').append('<div>'+data+'</div>');
 		},
-		error:function(XMLHttpRequest,textStatus, errorThrown) {  
+		error:function() {  
 		      //something went wrong, handle the error and display a message   
-		      console.log("Error status :"+textStatus);  
-		      console.log("Error type :"+errorThrown);  
-		      console.log("Error message :"+XMLHttpRequest.responseXML);
+		      console.log("Error");
 		}
 	});
 
