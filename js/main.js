@@ -28,6 +28,7 @@ var app = {
 	$.ajax({
 		type: "POST",
     		url: 'http://localhost:8182/discoveragent/upnp?actionparameters',
+		dataType:'jsonp',
             	crossDomain: true,
             	contentType: "application/json",
 		data: datos,
