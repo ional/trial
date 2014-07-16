@@ -30,6 +30,7 @@ var app = {
     		url: 'http://localhost:8182/discoveragent/upnp?proba',
 		dataType:'json',
             	crossDomain: true,
+		contentType: "application/x-www-form-urlencoded; charset=utf-8",
 		data: datos,
     		success: function(data) {
 			//it works, do something with the data
@@ -37,9 +38,9 @@ var app = {
 			console.log(data);
 			//$('.response').append('<div>'+data+'</div>');
 		},
-		error:function() {  
+		error:function(e ) { 
 		      //something went wrong, handle the error and display a message   
-		      console.log("Error");
+		      console.log("Error "+e);
 		}
 	});
 
