@@ -5,7 +5,7 @@
         Trial application to get ajax information by POST.
     </description>
     <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+        Ion Alberdi Bartolomé
     </author>
     <preference name="permissions" value="none" />
     <preference name="phonegap-version" value="3.3.0" />

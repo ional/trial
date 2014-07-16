@@ -25,10 +25,25 @@ var app = {
 	console.log("device: "+datos.device);
 	console.log("service: "+datos.service);
 	console.log("action: "+datos.action);
-	$.ajax({
+	/*$.ajax({
 		type: "POST",
-    		url: 'http://127.0.0.1:8182/discoveragent/upnp?actionparameters',
-		dataType: 'jsonp',
+    		url: 'http://localhost:8182/discoveragent/upnp?actionparameters',
+            	crossDomain: true,
+            	contentType: "application/json",
+		data: datos,
+    		success: function(data) {
+			console.log("Ondo bidali da.");
+			console.log(data);
+			//$('.response').append('<div>'+data+'</div>');
+        	//it works, do something with the data
+	    },
+	    error: function() {
+		//something went wrong, handle the error and display a message
+	    }
+	});*/
+	$.ajax({
+		type: "GET",
+    		url: 'http://localhost:8182/discoveragent/upnp?actionparameters&device=4&service=RenderingControl&action=SetVolumen',
             	crossDomain: true,
             	contentType: "application/json",
 		data: datos,
@@ -42,7 +57,6 @@ var app = {
 		//something went wrong, handle the error and display a message
 	    }
 	});
-
     }
 };
 console.log("Trial");
