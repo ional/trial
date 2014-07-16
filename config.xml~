@@ -17,15 +17,13 @@
         Ion Alberdi
     </author>
 
+    <access origin="http://localhost:8182" />
     <!--
       If you do not want any permissions to be added to your app, add the
       following tag to your config.xml; you will still have the INTERNET
       permission on your app, which PhoneGap requires.
-	->
-    <preference name="permissions" value="true"/>-->
-	<uses-permission android:name="android.permission.INTERNET" />
-	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	-->
+    <preference name="permissions" value="true"/>
 
     <!-- to enable individual permissions use the following examples -->
     <feature name="http://api.phonegap.com/1.0/battery"/>
