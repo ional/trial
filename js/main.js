@@ -40,7 +40,7 @@ var app = {
 		},
 		error:function(e ) { 
 		      //something went wrong, handle the error and display a message   
-		      console.log("Error "+e);
+		      console.log("Error "+e.responseText);
 		}
 	});
 
