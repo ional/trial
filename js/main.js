@@ -28,6 +28,9 @@ var app = {
 	$.ajax({
 		type: "POST",
     		url: 'http://127.0.0.1:8182/discoveragent/upnp?actionparameters',
+		dataType: 'jsonp',
+            	crossDomain: true,
+            	contentType: "application/json"
 		data: datos,
     		success: function(data) {
 			console.log("Ondo bidali da.");
