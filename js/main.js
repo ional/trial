@@ -15,7 +15,6 @@ var app = {
 
     initialize: function() {
 	console.log('initialize');
-	alert('initialize');
         this.store = new MemoryStore();
         //$('.search-key').on('keyup', $.proxy(this.findByName, this));
 	var datos={
@@ -23,10 +22,11 @@ var app = {
 		service:"RenderingControl",
 		action:"SetVolumen"
 	};
+	console.log(datos);
 	$.ajax({
 		type: "POST",
     		url: 'http://localhost:8182/discoveragent/upnp?actionparameters',
-		data:datos,
+		data: datos,
     		success: function(data) {
 			console.log(data);
 			//$('.response').append('<div>'+data+'</div>');
