@@ -30,7 +30,6 @@ var app = {
     		url: 'http://localhost:8182/discoveragent/upnp?proba',
 		dataType:'json',
             	crossDomain: true,
-            	contentType: "application/json",
 		data: datos,
     		success: function(data) {
 			//it works, do something with the data

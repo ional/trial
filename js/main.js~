@@ -27,7 +27,7 @@ var app = {
 	console.log("action: "+datos.action);
 	$.ajax({
 		type: "POST",
-    		url: 'http://localhost:8182/discoveragent/upnp?actionparameters',
+    		url: 'http://localhost:8182/discoveragent/upnp?proba',
 		dataType:'json',
             	crossDomain: true,
             	contentType: "application/json",
