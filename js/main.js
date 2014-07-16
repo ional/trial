@@ -22,7 +22,9 @@ var app = {
 		service:"RenderingControl",
 		action:"SetVolumen"
 	};
-	console.log(datos);
+	console.log("device: "+datos.device);
+	console.log("service: "+datos.service);
+	console.log("action: "+datos.action);
 	$.ajax({
 		type: "POST",
     		url: 'http://localhost:8182/discoveragent/upnp?actionparameters',
