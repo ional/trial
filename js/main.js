@@ -27,9 +27,10 @@ var app = {
 	console.log("action: "+datos.action);
 	$.ajax({
 		type: "POST",
-    		url: 'http://localhost:8182/discoveragent/upnp?actionparameters',
+    		url: 'http://127.0.0.1:8182/discoveragent/upnp?actionparameters',
 		data: datos,
     		success: function(data) {
+			console.log("Ondo bidali da.");
 			console.log(data);
 			//$('.response').append('<div>'+data+'</div>');
         	//it works, do something with the data
