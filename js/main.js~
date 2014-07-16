@@ -1,0 +1,41 @@
+var app = {
+
+    findByName: function() {
+        console.log('findByName');
+        this.store.findByName($('.search-key').val(), function(employees) {
+            var l = employees.length;
+            var e;
+            $('.employee-list').empty();
+            for (var i=0; i<l; i++) {
+                e = employees[i];
+                $('.employee-list').append('<li><a href="#employees/' + e.id + '">' + e.firstName + ' ' + e.lastName + '</a></li>');
+            }
+        });
+    },
+
+    initialize: function() {
+        this.store = new MemoryStore();
+        //$('.search-key').on('keyup', $.proxy(this.findByName, this));
+	var datos={
+		device:4,
+		service:"RenderingControl",
+		action:"SetVolumen"
+	};
+	$.ajax({
+		type: "POST",
+    		url: 'http://localhost:8182/discoveragent/upnp?actionparameters',
+		data:datos,
+    		success: function(data) {
+			alert(data);
+			//$('.response').append('<div>'+data+'</div>');
+        	//it works, do something with the data
+	    },
+	    error: function() {
+		//something went wrong, handle the error and display a message
+	    }
+	});
+
+    }
+};
+
+app.initialize();
