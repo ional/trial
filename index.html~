@@ -11,6 +11,9 @@
 <input class='search-key' type="text"/>
 <ul class='employee-list'></ul>
 </div>-->
-<div class='response'></div>
+<div class='devices'></div>
+<div class='services'></div>
+<div class='actions'></div>
+<div class='parameters'></div>
 </body>
 </html>

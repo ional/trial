@@ -25,6 +25,10 @@ var app = {
 	var datos={
 		device:4
 	};
+	$.post('http://localhost:8182/discoveragent/upnp?devicedetails', datos, function(data) {
+		//it works, do something with the data
+		$('.details').append('<br><div>'+data+'</div>');
+	});
 	$.post('http://localhost:8182/discoveragent/upnp?services', datos, function(data) {
 		//it works, do something with the data
 		$('.services').append('<br><div>'+data+'</div>');
