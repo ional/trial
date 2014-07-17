@@ -42,9 +42,11 @@ var app = {
 			}
 			//$('.response').append('<div>'+data+'</div>');
 		},
-		error:function(jqXHR,textStatus,errorThrown) { 
+		error:function(jqXHR, textStatus, errorThrown) { 
 			//something went wrong, handle the error and display a message   
-			console.log("Message: " + jqXHR);
+			console.log("Error "+e.message);
+			var r = jQuery.parseJSON(jqXHR);
+			console.log("Message: " + r);
 			console.log("textStatus: " + textStatus);
 			console.log("errorThrown: " + errorThrown);
 		}
