@@ -47,8 +47,11 @@ var app = {
 			console.log("Error "+e.message);
 			var r = jQuery.parseJSON(e.responseText);
 			console.log("Message: " + r.Message);
-			console.log("StackTrace: " r.stackTrace);
+			console.log("StackTrace: "+ r.stackTrace);
 			console.log("ExceptionType: " + r.ExceptionType);
+			/*console.log("Message: " + jqXHR);
+			console.log("textStatus: " + textStatus);
+			console.log("errorThrown: " + errorThrown);*/
 		}
 	});
 
