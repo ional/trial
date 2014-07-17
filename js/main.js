@@ -25,7 +25,17 @@ var app = {
 	console.log("device: "+datos.device);
 	console.log("service: "+datos.service);
 	console.log("action: "+datos.action);
-	$.ajax({
+	$.post(url: 'http://localhost:8182/discoveragent/upnp?proba',data: datos ,success: function(data) {
+			//it works, do something with the data
+			console.log("Ondo bidali da.");
+			obj = JSON.parse(data);
+			if (obj && obj.success === true) {
+				console.log(obj);
+				//window.location.href = 'home.html';
+			}
+			//$('.response').append('<div>'+data+'</div>');
+		});
+	/*$.ajax({
 		type: "POST",
     		url: 'http://localhost:8182/discoveragent/upnp?proba',
 		dataType:'json',
@@ -43,15 +53,12 @@ var app = {
 			//$('.response').append('<div>'+data+'</div>');
 		},
 		error:function(jqXHR, textStatus, errorThrown) { 
-			//something went wrong, handle the error and display a message   
-			//console.log("Error "+e.message);
-			//var r = jQuery.parseJSON(jqXHR);
-			//console.log("Message: " + r.status);
+			//something went wrong, handle the error and display a message
 			console.log("Message: " + jqXHR.status);
 			console.log("textStatus: " + textStatus);
 			console.log("errorThrown: " + errorThrown);
 		}
-	});
+	});*/
 
 	/*//Funciona!!!!
 	$.ajax({
