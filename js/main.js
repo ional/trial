@@ -44,9 +44,10 @@ var app = {
 		},
 		error:function(jqXHR, textStatus, errorThrown) { 
 			//something went wrong, handle the error and display a message   
-			console.log("Error "+e.message);
-			var r = jQuery.parseJSON(jqXHR);
-			console.log("Message: " + r);
+			//console.log("Error "+e.message);
+			//var r = jQuery.parseJSON(jqXHR);
+			//console.log("Message: " + r.status);
+			console.log("Message: " + jqXHR.status);
 			console.log("textStatus: " + textStatus);
 			console.log("errorThrown: " + errorThrown);
 		}
