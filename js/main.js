@@ -25,7 +25,7 @@ var app = {
 	console.log("device: "+datos.device);
 	console.log("service: "+datos.service);
 	console.log("action: "+datos.action);
-	$.post(url: 'http://localhost:8182/discoveragent/upnp?proba',data: datos ,success: function(data) {
+	$.post('http://localhost:8182/discoveragent/upnp?proba', datos , function(data) {
 			//it works, do something with the data
 			console.log("Ondo bidali da.");
 			obj = JSON.parse(data);
