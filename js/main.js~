@@ -40,14 +40,12 @@ var app = {
 				console.log(obj);
 				//window.location.href = 'home.html';
 			}
-			
-			
-			
 			//$('.response').append('<div>'+data+'</div>');
 		},
-		error:function(e ) { 
-		      //something went wrong, handle the error and display a message   
-		      console.log("Error "+e.message);
+		error:function(e) { 
+			//something went wrong, handle the error and display a message   
+			console.log("Error "+e.message);
+			console.log("Error "+e.message);
 		}
 	});
 

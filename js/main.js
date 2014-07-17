@@ -42,9 +42,13 @@ var app = {
 			}
 			//$('.response').append('<div>'+data+'</div>');
 		},
-		error:function(e ) { 
-		      //something went wrong, handle the error and display a message   
-		      console.log("Error "+e.message);
+		error:function(e) { 
+			//something went wrong, handle the error and display a message   
+			console.log("Error "+e.message);
+			var r = jQuery.parseJSON(e.responseText);
+			console.log("Message: " + r.Message);
+			console.log("StackTrace: " r.stackTrace);
+			console.log("ExceptionType: " + r.ExceptionType);
 		}
 	});
 
