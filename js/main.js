@@ -42,16 +42,11 @@ var app = {
 			}
 			//$('.response').append('<div>'+data+'</div>');
 		},
-		error:function(e) { 
+		error:function(jqXHR,textStatus,errorThrown) { 
 			//something went wrong, handle the error and display a message   
-			console.log("Error "+e.message);
-			var r = jQuery.parseJSON(e.responseText);
-			console.log("Message: " + r.Message);
-			console.log("StackTrace: "+ r.stackTrace);
-			console.log("ExceptionType: " + r.ExceptionType);
-			/*console.log("Message: " + jqXHR);
+			console.log("Message: " + jqXHR);
 			console.log("textStatus: " + textStatus);
-			console.log("errorThrown: " + errorThrown);*/
+			console.log("errorThrown: " + errorThrown);
 		}
 	});
 
