@@ -17,18 +17,38 @@ var app = {
 	console.log('initialize');
         this.store = new MemoryStore();
         //$('.search-key').on('keyup', $.proxy(this.findByName, this));
+
+	$.post('http://localhost:8182/discoveragent/upnp?devices', function(data) {
+		//it works, do something with the data
+		$('.devices').append('<div>'+data+'</div>');
+	});
+	var datos={
+		device:4
+	};
+	$.post('http://localhost:8182/discoveragent/upnp?services', datos, function(data) {
+		//it works, do something with the data
+		$('.devices').append('<br><div>'+data+'</div>');
+	});
+	var datos={
+		device:4,
+		service:"RenderingControl"
+	};
+	$.post('http://localhost:8182/discoveragent/upnp?services', datos, function(data) {
+		//it works, do something with the data
+		$('.devices').append('<br><div>'+data+'</div>');
+	});
 	var datos={
 		device:4,
 		service:"RenderingControl",
-		action:"SetVolumen"
+		action:"SetVolume"
 	};
 	console.log("device: "+datos.device);
 	console.log("service: "+datos.service);
 	console.log("action: "+datos.action);
 	$.post('http://localhost:8182/discoveragent/upnp?actionparameters', datos , function(data) {
-			//it works, do something with the data
-			$('.response').append('<div>'+data+'</div>');
-		});
+		//it works, do something with the data
+		$('.response').append('<br><div>'+data+'</div>');
+	});
 	/*$.ajax({
 		type: "POST",
     		url: 'http://localhost:8182/discoveragent/upnp?proba',

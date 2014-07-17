@@ -11,10 +11,6 @@
 <input class='search-key' type="text"/>
 <ul class='employee-list'></ul>
 </div>-->
-<ul class='response'></ul>
-</div>
-
-
-
+<div class='response'></div>
 </body>
 </html>
