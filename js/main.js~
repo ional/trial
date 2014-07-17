@@ -35,12 +35,19 @@ var app = {
     		success: function(data) {
 			//it works, do something with the data
 			console.log("Ondo bidali da.");
-			console.log(data);
+			obj = JSON.parse(data);
+			if (obj && obj.success === true) {
+				console.log(obj);
+				//window.location.href = 'home.html';
+			}
+			
+			
+			
 			//$('.response').append('<div>'+data+'</div>');
 		},
 		error:function(e ) { 
 		      //something went wrong, handle the error and display a message   
-		      console.log("Error "+e);
+		      console.log("Error "+e.message);
 		}
 	});
 
