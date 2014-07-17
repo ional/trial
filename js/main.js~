@@ -20,7 +20,7 @@ var app = {
 	var datos={
 		device:4,
 		service:"RenderingControl",
-		action:"SetVolumenDB"
+		action:"SetVolumen"
 	};
 	console.log("device: "+datos.device);
 	console.log("service: "+datos.service);
