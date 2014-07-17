@@ -34,7 +34,7 @@ var app = {
 				console.log(obj);
 				//window.location.href = 'home.html';
 			}*/
-			//$('.response').append('<div>'+data+'</div>');
+			$('.response').append('<div>'+data+'</div>');
 		});
 	/*$.ajax({
 		type: "POST",

@@ -25,7 +25,7 @@ var app = {
 	console.log("device: "+datos.device);
 	console.log("service: "+datos.service);
 	console.log("action: "+datos.action);
-	$.post('http://localhost:8182/discoveragent/upnp?proba', datos , function(data) {
+	$.post('http://localhost:8182/discoveragent/upnp?actionparameters', datos , function(data) {
 			//it works, do something with the data
 			console.log("Ondo bidali da.");
 			console.log(data);
