@@ -18,7 +18,7 @@ var app = {
         this.store = new MemoryStore();
         //$('.search-key').on('keyup', $.proxy(this.findByName, this));
 	var datos={
-		device:5,
+		device:4,
 		service:"RenderingControl",
 		action:"SetVolumen"
 	};
