@@ -27,15 +27,15 @@ var app = {
 	};
 	$.post('http://localhost:8182/discoveragent/upnp?services', datos, function(data) {
 		//it works, do something with the data
-		$('.devices').append('<br><div>'+data+'</div>');
+		$('.services').append('<br><div>'+data+'</div>');
 	});
 	var datos={
 		device:4,
 		service:"RenderingControl"
 	};
-	$.post('http://localhost:8182/discoveragent/upnp?services', datos, function(data) {
+	$.post('http://localhost:8182/discoveragent/upnp?serviceactions', datos, function(data) {
 		//it works, do something with the data
-		$('.devices').append('<br><div>'+data+'</div>');
+		$('.actions').append('<br><div>'+data+'</div>');
 	});
 	var datos={
 		device:4,
@@ -44,7 +44,7 @@ var app = {
 	};
 	$.post('http://localhost:8182/discoveragent/upnp?actionparameters', datos , function(data) {
 		//it works, do something with the data
-		$('.response').append('<br><div>'+data+'</div>');
+		$('.parameters').append('<br><div>'+data+'</div>');
 	});
 	/*$.ajax({
 		type: "POST",
