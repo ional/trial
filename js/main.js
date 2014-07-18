@@ -114,7 +114,7 @@ var app = {
 
 	$.get('http://localhost:8182/discoveragent/upnp?devicedetails&device=4', function(data) {
 		//it works, do something with the data
-		$('#getberria .details').append('<br><div>http://localhost:8182/discoveragent/upnp?devicedetails&device=4</div><br><div>'+data+'</div>');
+		$('#getberria .details').append('<br><div>http://localhost:8182/discoveragent/upnp/devicedetails&device=4</div><br><div>'+data+'</div>');
 	});
 	$.get('http://localhost:8182/discoveragent/upnp/services?device=4', function(data) {
 		//it works, do something with the data
@@ -128,7 +128,7 @@ var app = {
 
 	$.get('http://localhost:8182/discoveragent/upnp/parameters?device=4&service=RenderingControl&action=SetVolume', function(data) {
 		//it works, do something with the data
-		$('#getberria .parameters').append('<br><div>http://localhost:8182/discoveragent/upnp/parameters?device=5&service=RenderingControl&action=SetVolume</div><br><div>'+data+'</div>');
+		$('#getberria .parameters').append('<br><div>http://localhost:8182/discoveragent/upnp/parameters?device=4&service=RenderingControl&action=SetVolume</div><br><div>'+data+'</div>');
 	});
 	/*$.ajax({
 		type: "POST",
