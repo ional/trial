@@ -11,36 +11,36 @@
 <input class='search-key' type="text"/>
 <ul class='employee-list'></ul>
 </div>-->
-<h1>GET Zaharra</h1>
+<h1>Old GET request</h1>
 <br>
-<div id="getzaharra">
+<div id="getold">
 <div class='devices'></div>
 <div class='details'></div>
 <div class='services'></div>
 <div class='actions'></div>
 <div class='parameters'></div>
 </div>
-<h1>GET Berria</h1>
+<h1>New GET request</h1>
 <br>
-<div id="getberria">
+<div id="getnew">
 <div class='devices'></div>
 <div class='details'></div>
 <div class='services'></div>
 <div class='actions'></div>
 <div class='parameters'></div>
 </div>
-<h1>POST Zaharra</h1>
+<h1>Old POST request</h1>
 <br>
-<div id="postzaharra">
+<div id="postold">
 <div class='devices'></div>
 <div class='details'></div>
 <div class='services'></div>
 <div class='actions'></div>
 <div class='parameters'></div>
 </div>
-<h1>POST Berria</h1>
+<h1>New POST request</h1>
 <br>
-<div id="postberria">
+<div id="postnew">
 <div class='devices'></div>
 <div class='details'></div>
 <div class='services'></div>
