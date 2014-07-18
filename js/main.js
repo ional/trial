@@ -20,35 +20,115 @@ var app = {
 
 	$.post('http://localhost:8182/discoveragent/upnp?devices', function(data) {
 		//it works, do something with the data
-		$('.devices').append('<div>'+data+'</div>');
+		$('postzaharra .devices').append('<div>'+data+'</div>');
 	});
-	var datos={
+
+	var dato={
 		device:4
 	};
-	$.post('http://localhost:8182/discoveragent/upnp?devicedetails', datos, function(data) {
+	$.post('http://localhost:8182/discoveragent/upnp?devicedetails', dato, function(data) {
 		//it works, do something with the data
-		$('.details').append('<br><div>'+data+'</div>');
+		$('postzaharra .details').append('<br><div>'+data+'</div>');
 	});
-	$.post('http://localhost:8182/discoveragent/upnp?services', datos, function(data) {
+	$.post('http://localhost:8182/discoveragent/upnp?services', dato, function(data) {
 		//it works, do something with the data
-		$('.services').append('<br><div>'+data+'</div>');
+		$('postzaharra .services').append('<br><div>'+data+'</div>');
 	});
-	var datos={
+
+	var datos1={
 		device:4,
 		service:"RenderingControl"
 	};
-	$.post('http://localhost:8182/discoveragent/upnp?serviceactions', datos, function(data) {
+	$.post('http://localhost:8182/discoveragent/upnp?serviceactions', datos1, function(data) {
 		//it works, do something with the data
-		$('.actions').append('<br><div>'+data+'</div>');
+		$('postzaharra .actions').append('<br><div>'+data+'</div>');
 	});
-	var datos={
+	var datos2={
 		device:4,
 		service:"RenderingControl",
 		action:"SetVolume"
 	};
-	$.post('http://localhost:8182/discoveragent/upnp?actionparameters', datos , function(data) {
+	$.post('http://localhost:8182/discoveragent/upnp?actionparameters', datos2 , function(data) {
 		//it works, do something with the data
-		$('.parameters').append('<br><div>'+data+'</div>');
+		$('postzaharra .parameters').append('<br><div>'+data+'</div>');
+	});
+
+	////////////////////////////////////////////////////////////////////////////////////////////////
+
+	$.post('http://localhost:8182/discoveragent/upnp/devices', function(data) {
+		//it works, do something with the data
+		$('postberria .devices').append('<div>'+data+'</div>');
+	});
+
+	$.post('http://localhost:8182/discoveragent/upnp?devicedetails', dato, function(data) {
+		//it works, do something with the data
+		$('postberria .details').append('<br><div>'+data+'</div>');
+	});
+	$.post('http://localhost:8182/discoveragent/upnp/services', dato, function(data) {
+		//it works, do something with the data
+		$('postberria .services').append('<br><div>'+data+'</div>');
+	});
+
+	$.post('http://localhost:8182/discoveragent/upnp/actions', datos1, function(data) {
+		//it works, do something with the data
+		$('postberria .actions').append('<br><div>'+data+'</div>');
+	});
+
+	$.post('http://localhost:8182/discoveragent/upnp/parameters', datos2 , function(data) {
+		//it works, do something with the data
+		$('postberria .parameters').append('<br><div>'+data+'</div>');
+	});
+
+	////////////////////////////////////////////////////////////////////////////////////////////////
+
+	$.get('http://localhost:8182/discoveragent/upnp?devices', function(data) {
+		//it works, do something with the data
+		$('getzaharra .devices').append('<div>'+data+'</div>');
+	});
+
+	$.get('http://localhost:8182/discoveragent/upnp?devicedetails&device=4', dato, function(data) {
+		//it works, do something with the data
+		$('getzaharra .details').append('<br><div>'+data+'</div>');
+	});
+	$.get('http://localhost:8182/discoveragent/upnp?services?device=4', dato, function(data) {
+		//it works, do something with the data
+		$('getzaharra .services').append('<br><div>'+data+'</div>');
+	});
+
+	$.get('http://localhost:8182/discoveragent/upnp?actions&device=4&service=RenderingControl', datos1, function(data) {
+		//it works, do something with the data
+		$('getzaharra .actions').append('<br><div>'+data+'</div>');
+	});
+
+	$.get('http://localhost:8182/discoveragent/upnp?parameters&device=4&service=RenderingControl&action=SetVolume', datos2 , function(data) {
+		//it works, do something with the data
+		$('getzaharra .parameters').append('<br><div>'+data+'</div>');
+	});
+
+	////////////////////////////////////////////////////////////////////////////////////////////////
+
+	$.get('http://localhost:8182/discoveragent/upnp/devices', function(data) {
+		//it works, do something with the data
+		$('getberria .devices').append('<div>'+data+'</div>');
+	});
+
+	$.get('http://localhost:8182/discoveragent/upnp?devicedetails&device=4', dato, function(data) {
+		//it works, do something with the data
+		$('getberria .details').append('<br><div>'+data+'</div>');
+	});
+	$.get('http://localhost:8182/discoveragent/upnp/services?device=4', dato, function(data) {
+		//it works, do something with the data
+		$('getberria .services').append('<br><div>'+data+'</div>');
+	});
+
+	$.get('http://localhost:8182/discoveragent/upnp/actions?device=4&service=RenderingControl', datos1, function(data) {
+		//it works, do something with the data
+		$('getberria .actions').append('<br><div>'+data+'</div>');
+	});
+
+	$.get('http://localhost:8182/discoveragent/upnp/parameters?device=4&service=RenderingControl&action=SetVolume', datos2 , function(data) {
+		//it works, do something with the data
+		$('getberria .parameters').append('<br><div>'+data+'</div>');
 	});
 	/*$.ajax({
 		type: "POST",
@@ -78,7 +158,7 @@ var app = {
 	/*//Funciona!!!!
 	$.ajax({
 		type: "GET",
-    		url: 'http://localhost:8182/discoveragent/upnp?actionparameters&device=4&service=RenderingControl&action=SetVolumen',
+    		url: 'http://localhost:8182/discoveragent/upnp?actionparameters&device=4&service=RenderingControl&action=SetVolume',
             	crossDomain: true,
             	contentType: "application/json",
 		data: datos,
