@@ -39,7 +39,7 @@ var app = {
 		device:5,
 		service:"RenderingControl"
 	};
-	$.post('http://localhost:8182/discoveragent/upnp?serviceactions', datos1, function(data) {
+	$.post('http://localhost:8182/discoveragent/upnp?actions', datos1, function(data) {
 		//it works, do something with the data
 		$('#postzaharra .actions').append('<br><div>'+data+'</div>');
 	});
@@ -48,7 +48,7 @@ var app = {
 		service:"RenderingControl",
 		action:"SetVolume"
 	};
-	$.post('http://localhost:8182/discoveragent/upnp?actionparameters', datos2 , function(data) {
+	$.post('http://localhost:8182/discoveragent/upnp?parameters', datos2 , function(data) {
 		//it works, do something with the data
 		$('#postzaharra .parameters').append('<br><div>'+data+'</div>');
 	});
