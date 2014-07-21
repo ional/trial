@@ -1,8 +1,5 @@
-window.dicovery = (function () {
-	function Dicovery () {
-	 	return this;
-	}
-	_.prototype = {
+(function () {
+	var Discovery = {
 
 		devices: function() {
 			//function code
@@ -113,5 +110,4 @@ window.dicovery = (function () {
 			} else return 'UserProximityEvent status is not supported in your browser.';
 		}
 	}
-	return discovery;
-};
+})();
