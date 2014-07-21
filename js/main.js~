@@ -17,7 +17,7 @@ var app = {
 	console.log('initialize');
         this.store = new MemoryStore();
 
-	var dicovery = new Discovery();
+	//var dicovery = new Discovery();
         //$('.search-key').on('keyup', $.proxy(this.findByName, this));
 
 	$.post('http://localhost:8182/discoveragent/upnp?devices', function(data) {
@@ -176,7 +176,7 @@ var app = {
 	});*/
 
 	////////////////////////////////////////////////////////////////////////////////////////////////
-	$('#javascript .devices').append('<div>'+dicovery.devices()+'</div>');
+	$('#javascript .devices').append('<div>'+Dicovery.devices()+'</div>');
 	$('#javascript .services').append('<br><div>'+dicovery.services(4)+'</div>');
 	$('#javascript .actions').append('<br><div>'+dicovery.actions(4,"RenderingControl")+'</div>');
 	$('#javascript .parameters').append('<br><div>'+dicovery.parameters(4, "RenderingControl", "SetVolume")+'</div>');

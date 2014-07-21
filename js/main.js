@@ -176,19 +176,19 @@ var app = {
 	});*/
 
 	////////////////////////////////////////////////////////////////////////////////////////////////
-	$('#javascript .devices').append('<div>'+dicovery.devices()+'</div>');
-	$('#javascript .services').append('<br><div>'+dicovery.services(4)+'</div>');
-	$('#javascript .actions').append('<br><div>'+dicovery.actions(4,"RenderingControl")+'</div>');
-	$('#javascript .parameters').append('<br><div>'+dicovery.parameters(4, "RenderingControl", "SetVolume")+'</div>');
+	$('#javascript .devices').append('<div>'+Dicovery.devices()+'</div>');
+	$('#javascript .services').append('<br><div>'+Dicovery.services(4)+'</div>');
+	$('#javascript .actions').append('<br><div>'+Dicovery.actions(4,"RenderingControl")+'</div>');
+	$('#javascript .parameters').append('<br><div>'+Dicovery.parameters(4, "RenderingControl", "SetVolume")+'</div>');
 
-	$('#javascript .screenSize').append('<br><div>'+dicovery.services()+'</div>');
-	$('#javascript .geolocation').append('<br><div>'+dicovery.geolocation()+'</div>');
-	$('#javascript .orientation').append('<br><div>'+dicovery.orientation()+'</div>');
-	$('#javascript .media').append('<br><div>'+dicovery.media()+'</div>');
-	$('#javascript .vibration').append('<br><div>'+dicovery.vibration()+'</div>');
-	$('#javascript .battery').append('<br><div>'+dicovery.battery()+'</div>');
-	$('#javascript .userProximity').append('<br><div>'+dicovery.userProximity()+'</div>');
-	$('#javascript .deviceProximity').append('<br><div>'+dicovery.deviceProximity()+'</div>');
+	$('#javascript .screenSize').append('<br><div>'+Dicovery.services()+'</div>');
+	$('#javascript .geolocation').append('<br><div>'+Dicovery.geolocation()+'</div>');
+	$('#javascript .orientation').append('<br><div>'+Dicovery.orientation()+'</div>');
+	$('#javascript .media').append('<br><div>'+Dicovery.media()+'</div>');
+	$('#javascript .vibration').append('<br><div>'+Dicovery.vibration()+'</div>');
+	$('#javascript .battery').append('<br><div>'+Dicovery.battery()+'</div>');
+	$('#javascript .userProximity').append('<br><div>'+Dicovery.userProximity()+'</div>');
+	$('#javascript .deviceProximity').append('<br><div>'+Dicovery.deviceProximity()+'</div>');
     }
 };
 console.log("Trial");
