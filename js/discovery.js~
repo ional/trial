@@ -39,12 +39,10 @@ var dicovery = {
 		});
 	},
 	screenSize: function(){
-		if(window.outerWidth && window.outerHeight){
-			var width = window.outerWidth;
-			var height = window.outerHeight;
-			return "{"+width+","+height+"}";
-			//return [window.screen.width, window.screen.height];
-		} else  return 'Vibration is not supported in your browser.';
+		var width = window.outerWidth;
+		var height = window.outerHeight;
+		return "{"+width+","+height+"}";
+		//return [window.screen.width, window.screen.height];
 	},
 	geolocation: function(){
 		if(navigator.geolocation) {
