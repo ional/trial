@@ -176,7 +176,8 @@ var app = {
 	});*/
 
 	////////////////////////////////////////////////////////////////////////////////////////////////
-	var discovery = new Discovery();
+	var ms = {};
+	var discovery = new ms.Discovery();
 	$('#javascript .devices').append('<div>'+discovery.devices()+'</div>');
 	$('#javascript .services').append('<br><div>'+discovery.services(4)+'</div>');
 	$('#javascript .actions').append('<br><div>'+discovery.actions(4,"RenderingControl")+'</div>');
