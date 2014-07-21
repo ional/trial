@@ -66,7 +66,7 @@ var Dicovery = {
 		}
 	},
 	media: function(){
-		if((navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia))
+		if((navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia)){
 			return "Media";
 			/*if (navigator.getUserMedia) {
 				navigator.getUserMedia({audio: true, video: true}, function(stream) {

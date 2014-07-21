@@ -52,7 +52,7 @@ var Dicovery = {
 				var lat = position.coords.latitude;
 			    	var lon = position.coords.longitude;
 				return "{"+lat+","+long+"}";
-			}
+			});
 		} else return 'Vibration is not supported in your browser.';
 	},
 	orientation: function(){
