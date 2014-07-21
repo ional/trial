@@ -1,4 +1,4 @@
-var dicovery = {
+var Dicovery = {
 
 	devices: function() {
 		//function code
