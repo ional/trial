@@ -176,19 +176,19 @@ var app = {
 	});*/
 
 	////////////////////////////////////////////////////////////////////////////////////////////////
-	$('#javascript .devices').append('<div>'+Dicovery.devices()+'</div>');
-	$('#javascript .services').append('<br><div>'+Dicovery.services(4)+'</div>');
-	$('#javascript .actions').append('<br><div>'+Dicovery.actions(4,"RenderingControl")+'</div>');
-	$('#javascript .parameters').append('<br><div>'+Dicovery.parameters(4, "RenderingControl", "SetVolume")+'</div>');
+	$('#javascript .devices').append('<div>'+Discovery.devices()+'</div>');
+	$('#javascript .services').append('<br><div>'+Discovery.services(4)+'</div>');
+	$('#javascript .actions').append('<br><div>'+Discovery.actions(4,"RenderingControl")+'</div>');
+	$('#javascript .parameters').append('<br><div>'+Discovery.parameters(4, "RenderingControl", "SetVolume")+'</div>');
 
-	$('#javascript .screenSize').append('<br><div>'+Dicovery.services()+'</div>');
-	$('#javascript .geolocation').append('<br><div>'+Dicovery.geolocation()+'</div>');
-	$('#javascript .orientation').append('<br><div>'+Dicovery.orientation()+'</div>');
-	$('#javascript .media').append('<br><div>'+Dicovery.media()+'</div>');
-	$('#javascript .vibration').append('<br><div>'+Dicovery.vibration()+'</div>');
-	$('#javascript .battery').append('<br><div>'+Dicovery.battery()+'</div>');
-	$('#javascript .userProximity').append('<br><div>'+Dicovery.userProximity()+'</div>');
-	$('#javascript .deviceProximity').append('<br><div>'+Dicovery.deviceProximity()+'</div>');
+	$('#javascript .screenSize').append('<br><div>'+Discovery.services()+'</div>');
+	$('#javascript .geolocation').append('<br><div>'+Discovery.geolocation()+'</div>');
+	$('#javascript .orientation').append('<br><div>'+Discovery.orientation()+'</div>');
+	$('#javascript .media').append('<br><div>'+Discovery.media()+'</div>');
+	$('#javascript .vibration').append('<br><div>'+Discovery.vibration()+'</div>');
+	$('#javascript .battery').append('<br><div>'+Discovery.battery()+'</div>');
+	$('#javascript .userProximity').append('<br><div>'+Discovery.userProximity()+'</div>');
+	$('#javascript .deviceProximity').append('<br><div>'+Discovery.deviceProximity()+'</div>');
     }
 };
 console.log("Trial");
