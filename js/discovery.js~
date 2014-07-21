@@ -1,8 +1,8 @@
 window.dicovery = (function () {
 	function Dicovery () {
-	 
+	 	return this;
 	}
-	var dicovery = {
+	_.prototype = {
 
 		devices: function() {
 			//function code
@@ -114,4 +114,4 @@ window.dicovery = (function () {
 		}
 	}
 	return discovery;
-}());
+};
