@@ -183,12 +183,12 @@ var app = {
 
 	$('#javascript .screenSize').append('<br><div>'+dicovery.services()+'</div>');
 	$('#javascript .geolocation').append('<br><div>'+dicovery.geolocation()+'</div>');
-	$('#javascript .orientation').append('<br><div>'+dicovery.services()+'</div>');
-	$('#javascript .media').append('<br><div>'+dicovery.services()+'</div>');
-	$('#javascript .vibration').append('<br><div>'+dicovery.services()+'</div>');
-	$('#javascript .battery').append('<br><div>'+dicovery.services()+'</div>');
-	$('#javascript .userProximity').append('<br><div>'+dicovery.services()+'</div>');
-	$('#javascript .deviceProximity').append('<br><div>'+dicovery.services()+'</div>');
+	$('#javascript .orientation').append('<br><div>'+dicovery.orientation()+'</div>');
+	$('#javascript .media').append('<br><div>'+dicovery.media()+'</div>');
+	$('#javascript .vibration').append('<br><div>'+dicovery.vibration()+'</div>');
+	$('#javascript .battery').append('<br><div>'+dicovery.battery()+'</div>');
+	$('#javascript .userProximity').append('<br><div>'+dicovery.userProximity()+'</div>');
+	$('#javascript .deviceProximity').append('<br><div>'+dicovery.deviceProximity()+'</div>');
     }
 };
 console.log("Trial");

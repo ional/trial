@@ -17,7 +17,7 @@ var app = {
 	console.log('initialize');
         this.store = new MemoryStore();
 
-	var dicovery = new Discovery();
+	var dicovery = new discovery();
         //$('.search-key').on('keyup', $.proxy(this.findByName, this));
 
 	$.post('http://localhost:8182/discoveragent/upnp?devices', function(data) {
