@@ -16,6 +16,8 @@ var app = {
     initialize: function() {
 	console.log('initialize');
         this.store = new MemoryStore();
+
+	var dicovery = new Discovery();
         //$('.search-key').on('keyup', $.proxy(this.findByName, this));
 
 	$.post('http://localhost:8182/discoveragent/upnp?devices', function(data) {
@@ -172,6 +174,21 @@ var app = {
 		//something went wrong, handle the error and display a message
 	    }
 	});*/
+
+	////////////////////////////////////////////////////////////////////////////////////////////////
+	$('#javascript .devices').append('<div>'+dicovery.devices()+'</div>');
+	$('#javascript .services').append('<br><div>'+dicovery.services(4)+'</div>');
+	$('#javascript .actions').append('<br><div>'+dicovery.actions(4,"RenderingControl")+'</div>');
+	$('#javascript .parameters').append('<br><div>'+dicovery.parameters(4, "RenderingControl", "SetVolume")+'</div>');
+
+	$('#javascript .screenSize').append('<br><div>'+dicovery.services()+'</div>');
+	$('#javascript .geolocation').append('<br><div>'+dicovery.geolocation()+'</div>');
+	$('#javascript .orientation').append('<br><div>'+dicovery.orientation()+'</div>');
+	$('#javascript .media').append('<br><div>'+dicovery.media()+'</div>');
+	$('#javascript .vibration').append('<br><div>'+dicovery.vibration()+'</div>');
+	$('#javascript .battery').append('<br><div>'+dicovery.battery()+'</div>');
+	$('#javascript .userProximity').append('<br><div>'+dicovery.userProximity()+'</div>');
+	$('#javascript .deviceProximity').append('<br><div>'+dicovery.deviceProximity()+'</div>');
     }
 };
 console.log("Trial");

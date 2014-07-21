@@ -47,5 +47,20 @@
 <div class='actions'></div>
 <div class='parameters'></div>
 </div>
+<div id="javascript">
+<div class='devices'></div>
+<div class='services'></div>
+<div class='actions'></div>
+<div class='parameters'></div>
+
+<div class='devices'></div>
+<div class='services'></div>
+<div class='actions'></div>
+<div class='parameters'></div>
+<div class='devices'></div>
+<div class='services'></div>
+<div class='actions'></div>
+<div class='parameters'></div>
+</div>
 </body>
 </html>
