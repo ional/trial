@@ -109,5 +109,5 @@
 				return 'User Proximity Event';
 			} else return 'UserProximityEvent status is not supported in your browser.';
 		}
-	}
+	};
 })();
