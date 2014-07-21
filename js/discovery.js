@@ -108,15 +108,6 @@ var Dicovery = {
 			return 'User Proximity Event';
 		} else return 'UserProximityEvent status is not supported in your browser.';
 	}
-
-
-	function handleNoGeolocation(errorFlag) {
-	  if (errorFlag) {
-	    var content = 'Error: The Geolocation service failed.';
-	  } else {
-	    var content = 'Error: Your browser doesn\'t support geolocation.';
-	  }
-	}
 }
 
 
