@@ -1,4 +1,6 @@
+var ms = {};
 (function () {
+	
 	ms.Discovery = {
 		devices: function() {
 			//function code

@@ -176,14 +176,14 @@ var app = {
 	});*/
 
 	////////////////////////////////////////////////////////////////////////////////////////////////
-	var ms = {};
+	
 	var discovery = new ms.Discovery();
 	$('#javascript .devices').append('<div>'+discovery.devices()+'</div>');
 	$('#javascript .services').append('<br><div>'+discovery.services(4)+'</div>');
 	$('#javascript .actions').append('<br><div>'+discovery.actions(4,"RenderingControl")+'</div>');
 	$('#javascript .parameters').append('<br><div>'+discovery.parameters(4, "RenderingControl", "SetVolume")+'</div>');
 
-	$('#javascript .screenSize').append('<br><div>'+discovery.services()+'</div>');
+	$('#javascript .screenSize').append('<br><div>'+discovery.screenSize()+'</div>');
 	$('#javascript .geolocation').append('<br><div>'+discovery.geolocation()+'</div>');
 	$('#javascript .orientation').append('<br><div>'+discovery.orientation()+'</div>');
 	$('#javascript .media').append('<br><div>'+discovery.media()+'</div>');
