@@ -193,7 +193,7 @@ var app = {
 	console.log("discovery.userProximity() "+discovery.userProximity());
 	console.log("discovery.deviceProximity() "+discovery.deviceProximity());*/
 	console.log("Sartu da!!!");
-	console.log(discovery.devices);
+	console.log(discovery.devices.exec());
 	$('#javascrip .devices').append('<div>'+discovery.devices()+'</div>');
 	$('#javascrip .devices').append('<div>'+discovery.devices+'</div>');
 	/*$('#javascript .services').append('<br><div>'+discovery.services(4)+'</div>');
