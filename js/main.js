@@ -177,8 +177,10 @@ var app = {
 
 	////////////////////////////////////////////////////////////////////////////////////////////////
 
-	var discover = discovery.get();
-	console.log("discovery.devices() "+discover.devices());
+	/*var discover = discovery.get();
+	console.log("discovery.devices() "+discover.devices());*/
+	alert(discovery.devices());
+	alert(discovery.devices().toString());
 	console.log("discovery.devices() "+discovery.devices());
 	console.log("discovery.services(4) "+discovery.services(4));
 	console.log("discovery.actions(4,'RenderingControl')"+discovery.actions(4,"RenderingControl"));
