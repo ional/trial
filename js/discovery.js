@@ -124,9 +124,8 @@ discovery = (function () {
 			$.get('http://localhost:8182/discoveragent/upnp/devices', function(data) {
 				//it works, do something with the data
 				alert(data);
-				response = data;
+				return data;
 			});
-			return response;
 		},
 		services: function(device){
 		//function code

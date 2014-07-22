@@ -121,7 +121,7 @@ discovery = (function () {
 		devices: function () {
 		    	//function code
 			var response;
-			$.post('http://localhost:8182/discoveragent/upnp/devices', function(data) {
+			$.get('http://localhost:8182/discoveragent/upnp/devices', function(data) {
 				//it works, do something with the data
 				alert(data);
 				response = data;
