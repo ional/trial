@@ -202,7 +202,42 @@ var app = {
 	$('#javascript .actions').append('<br><div>'+discovery.actions(4,"RenderingControl")+'</div>');
 	$('#javascript .parameters').append('<br><div>'+discovery.parameters(4, "RenderingControl", "SetVolume")+'</div>');*/
 
-	console.log(discovery.screenSize());
+	var screen = discovery.screenSize();
+	var geolocation = discovery.geolocation());
+	var orientation = discovery.orientation());
+	var media = discovery.media());
+	var vibration = discovery.vibration());
+	var battery = discovery.battery());
+	var userProximity = discovery.userProximity());
+	var deviceProximity = discovery.deviceProximity());
+
+	/*console.log(discovery.screenSize());
+	console.log(discovery.geolocation());
+	console.log(discovery.orientation());
+	console.log(discovery.media());
+	console.log(discovery.vibration());
+	console.log(discovery.battery());
+	console.log(discovery.userProximity());
+	console.log(discovery.deviceProximity());
+
+	$('#javascrip .screenSize').append('<div>'+discovery.screenSize()+'</div>');
+	$('#javascrip .geolocation').append('<br><div>'+discovery.geolocation()+'</div>');
+	$('#javascrip .orientation').append('<br><div>'+discovery.orientation()+'</div>');
+	$('#javascrip .media').append('<br><div>'+discovery.media()+'</div>');
+	$('#javascrip .vibration').append('<br><div>'+discovery.vibration()+'</div>');
+	$('#javascrip .battery').append('<br><div>'+discovery.battery()+'</div>');
+	$('#javascrip .userProximity').append('<br><div>'+discovery.userProximity()+'</div>');
+	$('#javascrip .deviceProximity').append('<br><div>'+discovery.deviceProximity()+'</div>');*/
+
+	console.log(screenSize);
+	console.log(geolocation);
+	console.log(orientation);
+	console.log(media);
+	console.log(vibration);
+	console.log(battery);
+	console.log(userProximity);
+	console.log(deviceProximity);
+
 	$('#javascrip .screenSize').append('<div>'+discovery.screenSize()+'</div>');
 	$('#javascrip .geolocation').append('<br><div>'+discovery.geolocation()+'</div>');
 	$('#javascrip .orientation').append('<br><div>'+discovery.orientation()+'</div>');
