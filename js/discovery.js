@@ -175,7 +175,8 @@ discovery = (function () {
 		},
 		orientation: function(cb){
 			if (window.DeviceOrientationEvent) {
-				cb(window.orientation);
+				cb("Orientation");
+				//cb(window.orientation);
 				/* window.addEventListener("deviceorientation", function(event) {
 				  return {event.alpha, event.beta, event.gamma};
 			      	}, true);*/
