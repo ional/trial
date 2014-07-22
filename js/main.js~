@@ -202,7 +202,8 @@ var app = {
 	$('#javascript .actions').append('<br><div>'+discovery.actions(4,"RenderingControl")+'</div>');
 	$('#javascript .parameters').append('<br><div>'+discovery.parameters(4, "RenderingControl", "SetVolume")+'</div>');*/
 
-	$('#javascript .screenSize').append('<br><div>'+discovery.screenSize()+'</div>');
+	console.log(discovery.screenSize());
+	$('#javascript .screenSize').append('<div>'+discovery.screenSize()+'</div>');
 	$('#javascript .geolocation').append('<br><div>'+discovery.geolocation()+'</div>');
 	$('#javascript .orientation').append('<br><div>'+discovery.orientation()+'</div>');
 	$('#javascript .media').append('<br><div>'+discovery.media()+'</div>');

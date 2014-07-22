@@ -203,14 +203,14 @@ var app = {
 	$('#javascript .parameters').append('<br><div>'+discovery.parameters(4, "RenderingControl", "SetVolume")+'</div>');*/
 
 	console.log(discovery.screenSize());
-	$('#javascript .screenSize').append('<br><div>'+discovery.screenSize()+'</div>');
-	$('#javascript .geolocation').append('<br><div>'+discovery.geolocation()+'</div>');
-	$('#javascript .orientation').append('<br><div>'+discovery.orientation()+'</div>');
-	$('#javascript .media').append('<br><div>'+discovery.media()+'</div>');
-	$('#javascript .vibration').append('<br><div>'+discovery.vibration()+'</div>');
-	$('#javascript .battery').append('<br><div>'+discovery.battery()+'</div>');
-	$('#javascript .userProximity').append('<br><div>'+discovery.userProximity()+'</div>');
-	$('#javascript .deviceProximity').append('<br><div>'+discovery.deviceProximity()+'</div>');
+	$('#javascrip .screenSize').append('<div>'+discovery.screenSize()+'</div>');
+	$('#javascrip .geolocation').append('<br><div>'+discovery.geolocation()+'</div>');
+	$('#javascrip .orientation').append('<br><div>'+discovery.orientation()+'</div>');
+	$('#javascrip .media').append('<br><div>'+discovery.media()+'</div>');
+	$('#javascrip .vibration').append('<br><div>'+discovery.vibration()+'</div>');
+	$('#javascrip .battery').append('<br><div>'+discovery.battery()+'</div>');
+	$('#javascrip .userProximity').append('<br><div>'+discovery.userProximity()+'</div>');
+	$('#javascrip .deviceProximity').append('<br><div>'+discovery.deviceProximity()+'</div>');
     }
 };
 console.log("Trial");
