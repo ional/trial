@@ -194,7 +194,7 @@ var app = {
 	console.log("discovery.deviceProximity() "+discovery.deviceProximity());*/
 	console.log("Sartu da!!!");
 	//discovery.devices(function(data){console.log(data);});
-	console.log(discovery.devices());
+	console.log(discovery.devices().toString());
 	//$('#javascrip .devices').append('<div>'+discovery.devices()+'</div>');
 	/*$('#javascript .services').append('<br><div>'+discovery.services(4)+'</div>');
 	$('#javascript .actions').append('<br><div>'+discovery.actions(4,"RenderingControl")+'</div>');
