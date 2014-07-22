@@ -168,7 +168,7 @@ discovery = (function () {
 		geolocation: function(cb){
 			var answer
 			if(navigator.geolocation) {
-				answer = "geolocation");
+				answer = "geolocation";
 				/*navigator.geolocation.getCurrentPosition(function(position) {
 					var lat = position.coords.latitude;
 				    	var lon = position.coords.longitude;
@@ -205,9 +205,7 @@ discovery = (function () {
 				} else {
 				  	video.src = 'somevideo.webm'; // fallback.
 				}*/
-			}else{
-				 answer = 'Media is not supported in your browser.';
-			}
+			}else answer = 'Media is not supported in your browser.';
 			cb(answer);
 		},
 		vibration: function(cb){

@@ -185,9 +185,7 @@ discovery = (function () {
 				/* window.addEventListener("deviceorientation", function(event) {
 				  return {event.alpha, event.beta, event.gamma};
 			      	}, true);*/
-			}else{
-				answer = 'Orientation detect is not supported in your browser.';
-			}
+			}else answer = 'Orientation detect is not supported in your browser.';
 			cb(answer);
 		},
 		media: function(cb){
@@ -205,9 +203,7 @@ discovery = (function () {
 				} else {
 				  	video.src = 'somevideo.webm'; // fallback.
 				}*/
-			}else{
-				 answer = 'Media is not supported in your browser.';
-			}
+			}else answer = 'Media is not supported in your browser.';
 			cb(answer);
 		},
 		vibration: function(cb){
