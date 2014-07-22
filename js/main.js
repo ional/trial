@@ -203,6 +203,13 @@ var app = {
 	$('#javascript .parameters').append('<br><div>'+discovery.parameters(4, "RenderingControl", "SetVolume")+'</div>');*/
 
 	console.log(discovery.screenSize());
+	console.log(discovery.geolocation());
+	console.log(discovery.orientation());
+	console.log(discovery.media());
+	console.log(discovery.vibration());
+	console.log(discovery.battery());
+	console.log(discovery.userProximity());
+	console.log(discovery.deviceProximity());
 	$('#javascrip .screenSize').append('<div>'+discovery.screenSize()+'</div>');
 	$('#javascrip .geolocation').append('<br><div>'+discovery.geolocation()+'</div>');
 	$('#javascrip .orientation').append('<br><div>'+discovery.orientation()+'</div>');
