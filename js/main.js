@@ -194,10 +194,10 @@ var app = {
 	console.log("discovery.deviceProximity() "+discovery.deviceProximity());*/
 
 
-	discovery.devices(function(data){console.log(data); $('#javascrip .devices').append('<div>'+data+'</div>');});
+	/*discovery.devices(function(data){console.log(data); $('#javascrip .devices').append('<div>'+data+'</div>');});
 	discovery.services(4,function(data){console.log(data); $('#javascrip .services').append('<br><div>'+data+'</div>');});
 	discovery.actions(4, "RenderingControl",function(data){console.log(data); $('#javascrip .actions').append('<br><div>'+data+'</div>');});
-	discovery.parameters(4, "RenderingControl", "SetVolume",function(data){console.log(data); $('#javascrip .parameters').append('<br><div>'+data+'</div>');});
+	discovery.parameters(4, "RenderingControl", "SetVolume",function(data){console.log(data); $('#javascrip .parameters').append('<br><div>'+data+'</div>');});*/
 		
 	discovery.screenSize(function(data){console.log(data); $('#javascrip .screenSize').append('<div>'+data+'</div>');});
 	discovery.geolocation(function(data){console.log(data); $('#javascrip .geolocation').append('<br><div>'+data+'</div>');});
