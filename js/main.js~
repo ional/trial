@@ -20,7 +20,7 @@ var app = {
 	//var dicovery = new Discovery();
         //$('.search-key').on('keyup', $.proxy(this.findByName, this));
 
-	/*$.post('http://localhost:8182/discoveragent/upnp?devices', function(data) {
+	$.post('http://localhost:8182/discoveragent/upnp?devices', function(data) {
 		//it works, do something with the data
 		$('#postold .devices').append('<div>http://localhost:8182/discoveragent/upnp?devices</div><br><div>'+data+'</div>');
 	});
@@ -131,7 +131,7 @@ var app = {
 	$.get('http://localhost:8182/discoveragent/upnp/parameters?device=4&service=RenderingControl&action=SetVolume', function(data) {
 		//it works, do something with the data
 		$('#getnew .parameters').append('<br><div>http://localhost:8182/discoveragent/upnp/parameters?device=4&service=RenderingControl&action=SetVolume</div><br><div>'+data+'</div>');
-	});*/
+	});
 	/*$.ajax({
 		type: "POST",
     		url: 'http://localhost:8182/discoveragent/upnp?proba',
@@ -195,6 +195,8 @@ var app = {
 	console.log("Sartu da!!!");
 	discovery.devices(function(data){console.log(data); $('#javascrip .devices').append('<div>'+data+'</div>');});
 	discovery.services(4,function(data){console.log(data);$('#javascrip .services').append('<div>'+data+'</div>');});
+	discovery.actions(4, "RenderingControl",function(data){console.log(data);$('#javascrip .actions').append('<div>'+data+'</div>');});
+	discovery.parameters(4, "RenderingControl", "SetVolume",function(data){console.log(data);$('#javascrip .parameters').append('<div>'+data+'</div>');});
 	//$('#javascrip .devices').append('<div>'+discovery.devices()+'</div>');
 	/*$('#javascript .services').append('<br><div>'+discovery.services(4)+'</div>');
 	$('#javascript .actions').append('<br><div>'+discovery.actions(4,"RenderingControl")+'</div>');
