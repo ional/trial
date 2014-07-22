@@ -176,8 +176,10 @@ var app = {
 	});*/
 
 	////////////////////////////////////////////////////////////////////////////////////////////////
-	
-	console.log("discovery.devices() "+discovery.devices().toString());
+
+	var discover = discovery.get();
+	console.log("discovery.devices() "+discover.devices());
+	console.log("discovery.devices() "+discovery.devices());
 	console.log("discovery.services(4) "+discovery.services(4));
 	console.log("discovery.actions(4,'RenderingControl')"+discovery.actions(4,"RenderingControl"));
 	console.log("discovery.parameters(4, 'RenderingControl', 'SetVolume') "+discovery.parameters(4, "RenderingControl", "SetVolume"));
