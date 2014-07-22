@@ -157,36 +157,43 @@ discovery = (function () {
 			});
 		},
 		screenSize: function(cb){
+			var answer;
 			if(window.outerWidth && window.outerHeight){
 				var width = window.outerWidth;
 				var height = window.outerHeight;
-				cb("{"+width+","+height+"}");
-			} else  cb('Vibration is not supported in your browser.');
+				answer = "{"+width+","+height+"}";
+			} else  answer = 'Vibration is not supported in your browser.';
+			cb(answer);
 		},
 		geolocation: function(cb){
+			var answer
 			if(navigator.geolocation) {
-				cb("geolocation");
+				answer = "geolocation");
 				/*navigator.geolocation.getCurrentPosition(function(position) {
 					var lat = position.coords.latitude;
 				    	var lon = position.coords.longitude;
 					cb("{"+lat+","+lon+"}");
 				});*/
-			} else cb('Vibration is not supported in your browser.');
+			} else answer = 'Vibration is not supported in your browser.';
+			cb(answer);
 		},
 		orientation: function(cb){
+			var answer;
 			if (window.DeviceOrientationEvent) {
-				cb("Orientation");
+				answer = "Orientation";
 				//cb(window.orientation);
 				/* window.addEventListener("deviceorientation", function(event) {
 				  return {event.alpha, event.beta, event.gamma};
 			      	}, true);*/
 			}else{
-				 cb('Orientation detect is not supported in your browser.');
+				answer = 'Orientation detect is not supported in your browser.';
 			}
+			cb(answer);
 		},
 		media: function(cb){
+			var answer;
 			if((navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia)){
-				cb("Media");
+				answer = "Media";
 				/*if (navigator.getUserMedia) {
 					navigator.getUserMedia({audio: true, video: true}, function(stream) {
 						video.src = stream;
@@ -199,33 +206,42 @@ discovery = (function () {
 				  	video.src = 'somevideo.webm'; // fallback.
 				}*/
 			}else{
-				 cb('Media is not supported in your browser.');
+				 answer = 'Media is not supported in your browser.';
 			}
+			cb(answer);
 		},
 		vibration: function(cb){
+			var answer;
 			if(navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate){
 				navigator.vibrate([1000]);
-				cb("Vibration");
-			} else cb('Vibration is not supported in your browser.');
+				answer = "Vibration";
+			} else answer = 'Vibration is not supported in your browser.';
+			cb(answer);
 		},
 		battery: function(cb){
+			var answer;
 			if(navigator.battery || navigator.webkitBattery || navigator.mozBattery)
 			{
 				console.warn("Battery charging: ", battery.charging); // true
 				console.warn("Battery level: ", battery.level); // 0.58
 				console.warn("Battery discharging time: ", battery.dischargingTime);
-				cb("Battery");
-			} else cb('Battery status is not supported in your browser.');
+				answer = "Battery";
+			} else answer = 'Battery status is not supported in your browser.';
+			cb(answer);
 		},
 		userProximity: function(cb){
+			var answer;
 			if(window.DeviceProximityEvent){
-				cb('Device Proximity Event');
-			} else cb('DeviceProximityEvent status is not supported in your browser.');
+				answer = 'Device Proximity Event';
+			} else answer = 'DeviceProximityEvent status is not supported in your browser.';
+			cb(answer);
 		},
 		deviceProximity: function(cb){
+			var answer;
 			if(window.UserProximityEvent){
-				cb('User Proximity Event');
-			} else cb('UserProximityEvent status is not supported in your browser.');
+				answer = 'User Proximity Event';
+			} else answer = 'UserProximityEvent status is not supported in your browser.';
+			cb(answer);
 		}	
 	}     
 	/*Discovery.prototype.devices = function () {
