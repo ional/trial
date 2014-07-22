@@ -118,38 +118,31 @@ discovery = (function () {
 		get: function (selector) {
 			return new Dicovery();
 		},
-		/*devices: function (cb) {
+		devices: function (cb) {
 		    	//function code
 			$.post('http://localhost:8182/discoveragent/upnp/devices', function(data) {
 				//it works, do something with the data
 				cb(data);
 			});
-		},*/
-		devices: function () {
-		    	//function code
-			return $.post('http://localhost:8182/discoveragent/upnp/devices', function(data) {
-				//it works, do something with the data
-				return data;
-			});
 		},
-		services: function(device){
+		services: function(device, cb){
 		//function code
 			var dato={
 				device: device
 			};
 			$.post('http://localhost:8182/discoveragent/upnp/services', dato, function(data) {
 				//it works, do something with the data
-				return data;
+				cb(data);
 			});
 		},
-		actions: function(device, service){
+		actions: function(device, service, cb){
 			var dato={
 				device: device,
 				service: service
 			};
 			$.post('http://localhost:8182/discoveragent/upnp/actions', dato, function(data) {
 				//it works, do something with the data
-				return data;
+				cb(data);
 			});
 		},
 		parameters: function(device, service, action){
