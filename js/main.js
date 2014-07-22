@@ -192,7 +192,8 @@ var app = {
 	console.log("discovery.battery() "+discovery.battery());
 	console.log("discovery.userProximity() "+discovery.userProximity());
 	console.log("discovery.deviceProximity() "+discovery.deviceProximity());*/
-	console.log("Sartu da!!!");
+
+
 	discovery.devices(function(data){console.log(data); $('#javascrip .devices').append('<div>'+data+'</div>');});
 	discovery.services(4,function(data){console.log(data); $('#javascrip .services').append('<br><div>'+data+'</div>');});
 	discovery.actions(4, "RenderingControl",function(data){console.log(data); $('#javascrip .actions').append('<br><div>'+data+'</div>');});
