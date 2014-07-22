@@ -110,7 +110,7 @@
 		}
 	};
 })();*/
-window.discovery = (function () {
+discovery = (function () {
 	function Discovery () {
 	}
 
@@ -228,13 +228,13 @@ window.discovery = (function () {
 			} else return 'UserProximityEvent status is not supported in your browser.';
 		}	
 	}     
-	Discovery.prototype.devices = function () {
+	/*Discovery.prototype.devices = function () {
 	    	//function code
 		$.post('http://localhost:8182/discoveragent/upnp/devices', function(data) {
 			//it works, do something with the data
 
 			return data;
 		});
-	};
+	};*/
     	return discovery;
 }());
