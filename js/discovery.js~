@@ -156,36 +156,36 @@ discovery = (function () {
 				cb(data);
 			});
 		},
-		screenSize: function(){
+		screenSize: function(cb){
 			if(window.outerWidth && window.outerHeight){
 				var width = window.outerWidth;
 				var height = window.outerHeight;
-				return "{"+width+","+height+"}";
-				//return [window.screen.width, window.screen.height];
-			} else  return 'Vibration is not supported in your browser.';
+				cb("{"+width+","+height+"}");
+			} else  cb('Vibration is not supported in your browser.');
 		},
-		geolocation: function(){
+		geolocation: function(cb){
 			if(navigator.geolocation) {
-				navigator.geolocation.getCurrentPosition(function(position) {
+				cb("geolocation");
+				/*navigator.geolocation.getCurrentPosition(function(position) {
 					var lat = position.coords.latitude;
 				    	var lon = position.coords.longitude;
-					return "{"+lat+","+lon+"}";
-				});
-			} else return 'Vibration is not supported in your browser.';
+					cb("{"+lat+","+lon+"}");
+				});*/
+			} else cb('Vibration is not supported in your browser.');
 		},
-		orientation: function(){
+		orientation: function(cb){
 			if (window.DeviceOrientationEvent) {
-				return window.orientation;
+				cb(window.orientation);
 				/* window.addEventListener("deviceorientation", function(event) {
 				  return {event.alpha, event.beta, event.gamma};
 			      	}, true);*/
 			}else{
-				 return 'Orientation detect is not supported in your browser.';
+				 cb('Orientation detect is not supported in your browser.');
 			}
 		},
-		media: function(){
+		media: function(cb){
 			if((navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia)){
-				return "Media";
+				cb("Media");
 				/*if (navigator.getUserMedia) {
 					navigator.getUserMedia({audio: true, video: true}, function(stream) {
 						video.src = stream;
@@ -198,33 +198,33 @@ discovery = (function () {
 				  	video.src = 'somevideo.webm'; // fallback.
 				}*/
 			}else{
-				 return 'Media is not supported in your browser.';
+				 cb('Media is not supported in your browser.');
 			}
 		},
-		vibration: function(){
+		vibration: function(cb){
 			if(navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate){
 				navigator.vibrate([1000]);
-				return "Vibration";
-			} else return 'Vibration is not supported in your browser.';
+				cb("Vibration");
+			} else cb('Vibration is not supported in your browser.');
 		},
-		battery: function(){
+		battery: function(cb){
 			if(navigator.battery || navigator.webkitBattery || navigator.mozBattery)
 			{
 				console.warn("Battery charging: ", battery.charging); // true
 				console.warn("Battery level: ", battery.level); // 0.58
 				console.warn("Battery discharging time: ", battery.dischargingTime);
-				return "Battery";
-			} else return 'Battery status is not supported in your browser.';
+				cb("Battery");
+			} else cb('Battery status is not supported in your browser.');
 		},
-		userProximity: function(){
+		userProximity: function(cb){
 			if(window.DeviceProximityEvent){
-				return 'Device Proximity Event';
-			} else return 'DeviceProximityEvent status is not supported in your browser.';
+				cb('Device Proximity Event');
+			} else cb('DeviceProximityEvent status is not supported in your browser.');
 		},
-		deviceProximity: function(){
+		deviceProximity: function(cb){
 			if(window.UserProximityEvent){
-				return 'User Proximity Event';
-			} else return 'UserProximityEvent status is not supported in your browser.';
+				cb('User Proximity Event');
+			} else cb('UserProximityEvent status is not supported in your browser.');
 		}	
 	}     
 	/*Discovery.prototype.devices = function () {

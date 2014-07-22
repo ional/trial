@@ -161,16 +161,16 @@ discovery = (function () {
 				var width = window.outerWidth;
 				var height = window.outerHeight;
 				cb("{"+width+","+height+"}");
-				//return [window.screen.width, window.screen.height];
 			} else  cb('Vibration is not supported in your browser.');
 		},
 		geolocation: function(cb){
 			if(navigator.geolocation) {
-				navigator.geolocation.getCurrentPosition(function(position) {
+				cb("geolocation");
+				/*navigator.geolocation.getCurrentPosition(function(position) {
 					var lat = position.coords.latitude;
 				    	var lon = position.coords.longitude;
 					cb("{"+lat+","+lon+"}");
-				});
+				});*/
 			} else cb('Vibration is not supported in your browser.');
 		},
 		orientation: function(cb){
