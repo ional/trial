@@ -157,11 +157,12 @@ discovery = (function () {
 			});
 		},
 		screenSize: function(cb){
+			var answer;
 			if(window.outerWidth && window.outerHeight){
 				var width = window.outerWidth;
 				var height = window.outerHeight;
-				answer = "{"+width+","+height+"}");
-			} else  answer = 'Vibration is not supported in your browser.');
+				answer = "{"+width+","+height+"}";
+			} else  answer = 'Vibration is not supported in your browser.';
 			cb(answer);
 		},
 		geolocation: function(cb){
@@ -177,20 +178,22 @@ discovery = (function () {
 			cb(answer);
 		},
 		orientation: function(cb){
+			var answer;
 			if (window.DeviceOrientationEvent) {
-				answer = "Orientation");
+				answer = "Orientation";
 				//cb(window.orientation);
 				/* window.addEventListener("deviceorientation", function(event) {
 				  return {event.alpha, event.beta, event.gamma};
 			      	}, true);*/
 			}else{
-				answer = 'Orientation detect is not supported in your browser.');
+				answer = 'Orientation detect is not supported in your browser.';
 			}
 			cb(answer);
 		},
 		media: function(cb){
+			var answer;
 			if((navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia)){
-				answer = "Media");
+				answer = "Media";
 				/*if (navigator.getUserMedia) {
 					navigator.getUserMedia({audio: true, video: true}, function(stream) {
 						video.src = stream;
@@ -203,7 +206,7 @@ discovery = (function () {
 				  	video.src = 'somevideo.webm'; // fallback.
 				}*/
 			}else{
-				 answer = 'Media is not supported in your browser.');
+				 answer = 'Media is not supported in your browser.';
 			}
 			cb(answer);
 		},

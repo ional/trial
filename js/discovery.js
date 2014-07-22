@@ -168,7 +168,7 @@ discovery = (function () {
 		geolocation: function(cb){
 			var answer
 			if(navigator.geolocation) {
-				answer = "geolocation");
+				answer = "geolocation";
 				/*navigator.geolocation.getCurrentPosition(function(position) {
 					var lat = position.coords.latitude;
 				    	var lon = position.coords.longitude;
