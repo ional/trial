@@ -178,8 +178,8 @@ var app = {
 	////////////////////////////////////////////////////////////////////////////////////////////////
 	
 	var discovery = window.dicovery;
-	$('#javascript .devices').append('<div>'+discovery.devices()+'</div>');
-	$('#javascript .services').append('<br><div>'+discovery.services(4)+'</div>');
+	$('#javascript .devices').append('<div>'+window.discovery.devices()+'</div>');
+	$('#javascript .services').append('<br><div>'+window.discovery.services(4)+'</div>');
 	$('#javascript .actions').append('<br><div>'+discovery.actions(4,"RenderingControl")+'</div>');
 	$('#javascript .parameters').append('<br><div>'+discovery.parameters(4, "RenderingControl", "SetVolume")+'</div>');
 
