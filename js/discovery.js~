@@ -227,9 +227,6 @@ window.discovery = (function () {
 			} else return 'UserProximityEvent status is not supported in your browser.';
 		}	
 	}     
-    	return discovery;
-}());
-
 	Discovery.prototype.devices = function () {
 	    	//function code
 		$.post('http://localhost:8182/discoveragent/upnp/devices', function(data) {
@@ -237,3 +234,5 @@ window.discovery = (function () {
 			return data;
 		});
 	};
+    	return discovery;
+}());

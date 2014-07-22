@@ -169,7 +169,7 @@ window.discovery = (function () {
 				navigator.geolocation.getCurrentPosition(function(position) {
 					var lat = position.coords.latitude;
 				    	var lon = position.coords.longitude;
-					return "{"+lat+","+long+"}";
+					return "{"+lat+","+lon+"}";
 				});
 			} else return 'Vibration is not supported in your browser.';
 		},
