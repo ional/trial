@@ -118,12 +118,17 @@ discovery = (function () {
 		get: function (selector) {
 			return new Dicovery();
 		},
+		/*devices: function (cb) {
+		    	//function code
+			$.post('http://localhost:8182/discoveragent/upnp/devices', function(data) {
+				//it works, do something with the data
+				cb(data);
+			});
+		},*/
 		devices: function () {
 		    	//function code
-			var response;
 			return $.post('http://localhost:8182/discoveragent/upnp/devices', function(data) {
 				//it works, do something with the data
-				alert(data);
 				return data;
 			});
 		},
