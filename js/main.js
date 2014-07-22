@@ -179,7 +179,7 @@ var app = {
 
 	/*var discover = discovery.get();
 	console.log("discovery.devices() "+discover.devices());*/
-	alert(discovery.devices());
+	/*alert(discovery.devices());
 	console.log("discovery.devices() "+discovery.devices());
 	console.log("discovery.services(4) "+discovery.services(4));
 	console.log("discovery.actions(4,'RenderingControl')"+discovery.actions(4,"RenderingControl"));
@@ -191,7 +191,7 @@ var app = {
 	console.log("discovery.vibration() "+discovery.vibration());
 	console.log("discovery.battery() "+discovery.battery());
 	console.log("discovery.userProximity() "+discovery.userProximity());
-	console.log("discovery.deviceProximity() "+discovery.deviceProximity());
+	console.log("discovery.deviceProximity() "+discovery.deviceProximity());*/
 
 	$('#javascript .devices').append('<div>'+discovery.devices()+'</div>');
 	$('#javascript .services').append('<br><div>'+discovery.services(4)+'</div>');
