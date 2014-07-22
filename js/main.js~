@@ -177,20 +177,32 @@ var app = {
 
 	////////////////////////////////////////////////////////////////////////////////////////////////
 	
-	var discovery = window.dicovery;
+console.log("window.discovery.devices() "+window.discovery.devices());
+console.log("window.discovery.services(4) "+window.discovery.services(4));
+console.log("window.discovery.actions(4,'RenderingControl')"+window.discovery.actions(4,"RenderingControl"));
+console.log("window.discovery.parameters(4, 'RenderingControl', 'SetVolume') "+window.discovery.parameters(4, "RenderingControl", "SetVolume"));
+console.log("window.discovery.screenSize() "+window.discovery.screenSize());
+console.log("window.discovery.geolocation() "+window.discovery.geolocation());
+console.log("window.discovery.orientation() "+window.discovery.orientation());
+console.log("window.discovery.media() "+window.discovery.media());
+console.log("window.discovery.vibration() "+window.discovery.vibration());
+console.log("window.discovery.battery() "+window.discovery.battery());
+console.log("window.discovery.userProximity() "+window.discovery.userProximity());
+console.log(""+);
+
 	$('#javascript .devices').append('<div>'+window.discovery.devices()+'</div>');
 	$('#javascript .services').append('<br><div>'+window.discovery.services(4)+'</div>');
-	$('#javascript .actions').append('<br><div>'+discovery.actions(4,"RenderingControl")+'</div>');
-	$('#javascript .parameters').append('<br><div>'+discovery.parameters(4, "RenderingControl", "SetVolume")+'</div>');
+	$('#javascript .actions').append('<br><div>'+window.discovery.actions(4,"RenderingControl")+'</div>');
+	$('#javascript .parameters').append('<br><div>'+window.discovery.parameters(4, "RenderingControl", "SetVolume")+'</div>');
 
-	$('#javascript .screenSize').append('<br><div>'+discovery.screenSize()+'</div>');
-	$('#javascript .geolocation').append('<br><div>'+discovery.geolocation()+'</div>');
-	$('#javascript .orientation').append('<br><div>'+discovery.orientation()+'</div>');
-	$('#javascript .media').append('<br><div>'+discovery.media()+'</div>');
-	$('#javascript .vibration').append('<br><div>'+discovery.vibration()+'</div>');
-	$('#javascript .battery').append('<br><div>'+discovery.battery()+'</div>');
-	$('#javascript .userProximity').append('<br><div>'+discovery.userProximity()+'</div>');
-	$('#javascript .deviceProximity').append('<br><div>'+discovery.deviceProximity()+'</div>');
+	$('#javascript .screenSize').append('<br><div>'+window.discovery.screenSize()+'</div>');
+	$('#javascript .geolocation').append('<br><div>'+window.discovery.geolocation()+'</div>');
+	$('#javascript .orientation').append('<br><div>'+window.discovery.orientation()+'</div>');
+	$('#javascript .media').append('<br><div>'+window.discovery.media()+'</div>');
+	$('#javascript .vibration').append('<br><div>'+window.discovery.vibration()+'</div>');
+	$('#javascript .battery').append('<br><div>'+window.discovery.battery()+'</div>');
+	$('#javascript .userProximity').append('<br><div>'+window.discovery.userProximity()+'</div>');
+	$('#javascript .deviceProximity').append('<br><div>'+window.discovery.deviceProximity()+'</div>');
     }
 };
 console.log("Trial");

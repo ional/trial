@@ -2,8 +2,8 @@
 <head>
 	<script src="lib/jquery-1.8.2.min.js"></script>
 	<script src="js/storage/memory-store.js"></script>
-	<script src="js/main.js"></script>
 	<script src="js/discovery.js"></script>
+	<script src="js/main.js"></script>	
 </head>
 <body>
 
@@ -49,6 +49,8 @@
 <div class='actions'></div>
 <div class='parameters'></div>
 </div>
+
+<h1>Other request</h1>
 <div id="javascript">
 <div class='devices'></div>
 <div class='services'></div>

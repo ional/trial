@@ -177,6 +177,19 @@ var app = {
 
 	////////////////////////////////////////////////////////////////////////////////////////////////
 	
+console.log("window.discovery.devices() "+window.discovery.devices());
+console.log("window.discovery.services(4) "+window.discovery.services(4));
+console.log("window.discovery.actions(4,'RenderingControl')"+window.discovery.actions(4,"RenderingControl"));
+console.log("window.discovery.parameters(4, 'RenderingControl', 'SetVolume') "+window.discovery.parameters(4, "RenderingControl", "SetVolume"));
+console.log("window.discovery.screenSize() "+window.discovery.screenSize());
+console.log("window.discovery.geolocation() "+window.discovery.geolocation());
+console.log("window.discovery.orientation() "+window.discovery.orientation());
+console.log("window.discovery.media() "+window.discovery.media());
+console.log("window.discovery.vibration() "+window.discovery.vibration());
+console.log("window.discovery.battery() "+window.discovery.battery());
+console.log("window.discovery.userProximity() "+window.discovery.userProximity());
+console.log("window.discovery.deviceProximity() "+window.discovery.deviceProximity());
+
 	$('#javascript .devices').append('<div>'+window.discovery.devices()+'</div>');
 	$('#javascript .services').append('<br><div>'+window.discovery.services(4)+'</div>');
 	$('#javascript .actions').append('<br><div>'+window.discovery.actions(4,"RenderingControl")+'</div>');
