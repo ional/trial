@@ -16,55 +16,54 @@
 <h1>Old GET request</h1>
 <br>
 <div id="getold">
-<div class='devices'></div>
-<div class='details'></div>
-<div class='services'></div>
-<div class='actions'></div>
-<div class='parameters'></div>
+	<div class='devices'></div>
+	<div class='details'></div>
+	<div class='services'></div>
+	<div class='actions'></div>
+	<div class='parameters'></div>
 </div>
 <h1>New GET request</h1>
 <br>
 <div id="getnew">
-<div class='devices'></div>
-<div class='details'></div>
-<div class='services'></div>
-<div class='actions'></div>
-<div class='parameters'></div>
+	<div class='devices'></div>
+	<div class='details'></div>
+	<div class='services'></div>
+	<div class='actions'></div>
+	<div class='parameters'></div>
 </div>
 <h1>Old POST request</h1>
 <br>
 <div id="postold">
-<div class='devices'></div>
-<div class='details'></div>
-<div class='services'></div>
-<div class='actions'></div>
-<div class='parameters'></div>
+	<div class='devices'></div>
+	<div class='details'></div>
+	<div class='services'></div>
+	<div class='actions'></div>
+	<div class='parameters'></div>
 </div>
 <h1>New POST request</h1>
 <br>
 <div id="postnew">
-<div class='devices'></div>
-<div class='details'></div>
-<div class='services'></div>
-<div class='actions'></div>
-<div class='parameters'></div>
+	<div class='devices'></div>
+	<div class='details'></div>
+	<div class='services'></div>
+	<div class='actions'></div>
+	<div class='parameters'></div>
 </div>
-
 <h1>Other request</h1>
+<br>
 <div id="javascript">
-<div class='devices'></div>
-<div class='services'></div>
-<div class='actions'></div>
-<div class='parameters'></div>
-
-<div class='screenSize'></div>
-<div class='geolocation'></div>
-<div class='orientation'></div>
-<div class='media'></div>
-<div class='vibration'></div>
-<div class='battery'></div>
-<div class='userProximity'></div>
-<div class='deviceProximity'></div>
+	<div class='devices'></div>
+	<div class='services'></div>
+	<div class='actions'></div>
+	<div class='parameters'></div>
+	<div class='screenSize'></div>
+	<div class='geolocation'></div>
+	<div class='orientation'></div>
+	<div class='media'></div>
+	<div class='vibration'></div>
+	<div class='battery'></div>
+	<div class='userProximity'></div>
+	<div class='deviceProximity'></div>
 </div>
 </body>
 </html>

@@ -194,7 +194,7 @@ var app = {
 	console.log("discovery.deviceProximity() "+discovery.deviceProximity());*/
 
 	$('#javascript .devices').append('<div>'+discovery.devices()+'</div>');
-	$('#javascript .services').append('<br><div>'+discovery.services(4)+'</div>');
+	/*$('#javascript .services').append('<br><div>'+discovery.services(4)+'</div>');
 	$('#javascript .actions').append('<br><div>'+discovery.actions(4,"RenderingControl")+'</div>');
 	$('#javascript .parameters').append('<br><div>'+discovery.parameters(4, "RenderingControl", "SetVolume")+'</div>');
 
@@ -205,7 +205,7 @@ var app = {
 	$('#javascript .vibration').append('<br><div>'+discovery.vibration()+'</div>');
 	$('#javascript .battery').append('<br><div>'+discovery.battery()+'</div>');
 	$('#javascript .userProximity').append('<br><div>'+discovery.userProximity()+'</div>');
-	$('#javascript .deviceProximity').append('<br><div>'+discovery.deviceProximity()+'</div>');
+	$('#javascript .deviceProximity').append('<br><div>'+discovery.deviceProximity()+'</div>');*/
     }
 };
 console.log("Trial");
