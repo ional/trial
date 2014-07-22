@@ -179,7 +179,6 @@ var app = {
 
 	/*var discover = discovery.get();
 	console.log("discovery.devices() "+discover.devices());*/
-	alert(discovery.get());
 	alert(discovery.devices());
 	console.log("discovery.devices() "+discovery.devices());
 	console.log("discovery.services(4) "+discovery.services(4));
