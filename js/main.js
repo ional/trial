@@ -177,7 +177,6 @@ var app = {
 
 	////////////////////////////////////////////////////////////////////////////////////////////////
 	
-	alert(window.discovery.devices());
 	console.log("window.discovery.devices() "+window.discovery.devices());
 	console.log("window.discovery.services(4) "+window.discovery.services(4));
 	console.log("window.discovery.actions(4,'RenderingControl')"+window.discovery.actions(4,"RenderingControl"));
