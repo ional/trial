@@ -14,7 +14,7 @@ var app = {
     },
 
     initialize: function() {
-	console.log('initialize');
+	console.log('Initialize');
         this.store = new MemoryStore();
 
 	//var dicovery = new Discovery();
@@ -145,7 +145,7 @@ var app = {
 			obj = JSON.parse(data);
 			if (obj && obj.success === true) {
 				console.log(obj);
-				//window.location.href = 'home.html';
+				//location.href = 'home.html';
 			}
 			//$('.response').append('<div>'+data+'</div>');
 		},
@@ -177,32 +177,32 @@ var app = {
 
 	////////////////////////////////////////////////////////////////////////////////////////////////
 	
-	console.log("window.discovery.devices() "+window.discovery.devices());
-	console.log("window.discovery.services(4) "+window.discovery.services(4));
-	console.log("window.discovery.actions(4,'RenderingControl')"+window.discovery.actions(4,"RenderingControl"));
-	console.log("window.discovery.parameters(4, 'RenderingControl', 'SetVolume') "+window.discovery.parameters(4, "RenderingControl", "SetVolume"));
-	console.log("window.discovery.screenSize() "+window.discovery.screenSize());
-	console.log("window.discovery.geolocation() "+window.discovery.geolocation());
-	console.log("window.discovery.orientation() "+window.discovery.orientation());
-	console.log("window.discovery.media() "+window.discovery.media());
-	console.log("window.discovery.vibration() "+window.discovery.vibration());
-	console.log("window.discovery.battery() "+window.discovery.battery());
-	console.log("window.discovery.userProximity() "+window.discovery.userProximity());
-	console.log("window.discovery.deviceProximity() "+window.discovery.deviceProximity());
+	console.log("discovery.devices() "+discovery.devices());
+	console.log("discovery.services(4) "+discovery.services(4));
+	console.log("discovery.actions(4,'RenderingControl')"+discovery.actions(4,"RenderingControl"));
+	console.log("discovery.parameters(4, 'RenderingControl', 'SetVolume') "+discovery.parameters(4, "RenderingControl", "SetVolume"));
+	console.log("discovery.screenSize() "+discovery.screenSize());
+	console.log("discovery.geolocation() "+discovery.geolocation());
+	console.log("discovery.orientation() "+discovery.orientation());
+	console.log("discovery.media() "+discovery.media());
+	console.log("discovery.vibration() "+discovery.vibration());
+	console.log("discovery.battery() "+discovery.battery());
+	console.log("discovery.userProximity() "+discovery.userProximity());
+	console.log("discovery.deviceProximity() "+discovery.deviceProximity());
 
-	$('#javascript .devices').append('<div>'+window.discovery.devices()+'</div>');
-	$('#javascript .services').append('<br><div>'+window.discovery.services(4)+'</div>');
-	$('#javascript .actions').append('<br><div>'+window.discovery.actions(4,"RenderingControl")+'</div>');
-	$('#javascript .parameters').append('<br><div>'+window.discovery.parameters(4, "RenderingControl", "SetVolume")+'</div>');
+	$('#javascript .devices').append('<div>'+discovery.devices()+'</div>');
+	$('#javascript .services').append('<br><div>'+discovery.services(4)+'</div>');
+	$('#javascript .actions').append('<br><div>'+discovery.actions(4,"RenderingControl")+'</div>');
+	$('#javascript .parameters').append('<br><div>'+discovery.parameters(4, "RenderingControl", "SetVolume")+'</div>');
 
-	$('#javascript .screenSize').append('<br><div>'+window.discovery.screenSize()+'</div>');
-	$('#javascript .geolocation').append('<br><div>'+window.discovery.geolocation()+'</div>');
-	$('#javascript .orientation').append('<br><div>'+window.discovery.orientation()+'</div>');
-	$('#javascript .media').append('<br><div>'+window.discovery.media()+'</div>');
-	$('#javascript .vibration').append('<br><div>'+window.discovery.vibration()+'</div>');
-	$('#javascript .battery').append('<br><div>'+window.discovery.battery()+'</div>');
-	$('#javascript .userProximity').append('<br><div>'+window.discovery.userProximity()+'</div>');
-	$('#javascript .deviceProximity').append('<br><div>'+window.discovery.deviceProximity()+'</div>');
+	$('#javascript .screenSize').append('<br><div>'+discovery.screenSize()+'</div>');
+	$('#javascript .geolocation').append('<br><div>'+discovery.geolocation()+'</div>');
+	$('#javascript .orientation').append('<br><div>'+discovery.orientation()+'</div>');
+	$('#javascript .media').append('<br><div>'+discovery.media()+'</div>');
+	$('#javascript .vibration').append('<br><div>'+discovery.vibration()+'</div>');
+	$('#javascript .battery').append('<br><div>'+discovery.battery()+'</div>');
+	$('#javascript .userProximity').append('<br><div>'+discovery.userProximity()+'</div>');
+	$('#javascript .deviceProximity').append('<br><div>'+discovery.deviceProximity()+'</div>');
     }
 };
 console.log("Trial");

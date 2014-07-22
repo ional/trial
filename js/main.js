@@ -14,7 +14,7 @@ var app = {
     },
 
     initialize: function() {
-	console.log('initialize');
+	console.log('Initialize');
         this.store = new MemoryStore();
 
 	//var dicovery = new Discovery();
@@ -177,7 +177,7 @@ var app = {
 
 	////////////////////////////////////////////////////////////////////////////////////////////////
 	
-	console.log("discovery.devices() "+discovery.devices());
+	console.log("discovery.devices() "+discovery.devices().toString());
 	console.log("discovery.services(4) "+discovery.services(4));
 	console.log("discovery.actions(4,'RenderingControl')"+discovery.actions(4,"RenderingControl"));
 	console.log("discovery.parameters(4, 'RenderingControl', 'SetVolume') "+discovery.parameters(4, "RenderingControl", "SetVolume"));
