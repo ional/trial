@@ -122,7 +122,6 @@ window.discovery = (function () {
 		    	//function code
 			$.post('http://localhost:8182/discoveragent/upnp/devices', function(data) {
 				//it works, do something with the data
-				alert(data);
 				return data;
 			});
 		},
