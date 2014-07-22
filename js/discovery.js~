@@ -145,7 +145,7 @@ discovery = (function () {
 				cb(data);
 			});
 		},
-		parameters: function(device, service, action){
+		parameters: function(device, service, action, cb){
 			var dato={
 				device: device,
 				service: service,
@@ -153,7 +153,7 @@ discovery = (function () {
 			};
 			$.post('http://localhost:8182/discoveragent/upnp/parameters', dato, function(data) {
 				//it works, do something with the data
-				return data;
+				cb(data);
 			});
 		},
 		screenSize: function(){
