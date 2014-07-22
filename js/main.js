@@ -192,7 +192,7 @@ var app = {
 	console.log("discovery.battery() "+discovery.battery());
 	console.log("discovery.userProximity() "+discovery.userProximity());
 	console.log("discovery.deviceProximity() "+discovery.deviceProximity());*/
-
+	console.log("Sartu da!!!");
 	$('#javascrip .devices').append('<div>'+discovery.devices()+'</div>');
 	/*$('#javascript .services').append('<br><div>'+discovery.services(4)+'</div>');
 	$('#javascript .actions').append('<br><div>'+discovery.actions(4,"RenderingControl")+'</div>');
