@@ -171,11 +171,10 @@ discovery = (function () {
 				    	var lon = position.coords.longitude;
 					return "{"+lat+","+lon+"}";
 				});
-			} else return  'Vibration is not supported in your browser.';
+			} else return  'Geolocation is not supported in your browser.';
 
 		},
 		orientation: function(){
-
 			if (window.DeviceOrientationEvent) {
 				return "Orientation";
 				//cb(window.orientation);

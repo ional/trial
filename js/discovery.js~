@@ -159,25 +159,22 @@ discovery = (function () {
 		},
 		screenSize: function(){
 			if(window.outerWidth && window.outerHeight){
-				/*var width = window.outerWidth;
+				var width = window.outerWidth;
 				var height = window.outerHeight;
-				return "{"+width+","+height+"}";*/
-				return "screenSize";
+				return "{"+width+","+height+"}";
 			} else  return 'Vibration is not supported in your browser.';
 		},
 		geolocation: function(){
 			if(navigator.geolocation) {
-				return  "geolocation";
-				/*navigator.geolocation.getCurrentPosition(function(position) {
+				navigator.geolocation.getCurrentPosition(function(position) {
 					var lat = position.coords.latitude;
 				    	var lon = position.coords.longitude;
-					cb("{"+lat+","+lon+"}");
-				});*/
+					return "{"+lat+","+lon+"}";
+				});
 			} else return  'Vibration is not supported in your browser.';
 
 		},
 		orientation: function(){
-
 			if (window.DeviceOrientationEvent) {
 				return "Orientation";
 				//cb(window.orientation);
