@@ -193,7 +193,7 @@ var app = {
 	console.log("discovery.userProximity() "+discovery.userProximity());
 	console.log("discovery.deviceProximity() "+discovery.deviceProximity());*/
 
-	document.ready(function(){
+	$(document).ready(function(){
 		var screen = discovery.screenSize();
 		var geolocation = discovery.geolocation();
 		var orientation = discovery.orientation();
