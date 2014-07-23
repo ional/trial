@@ -166,10 +166,10 @@ discovery = (function () {
 		},
 		geolocation: function(){
 			if(navigator.geolocation) {
-				navigator.geolocation.getCurrentPosition(function(position) {
-					alert("{"+position.coords.latitude+","+position.coords.longitude+"}");
+				var proba = navigator.geolocation.getCurrentPosition(function(position) {
 					return "{"+position.coords.latitude+","+position.coords.longitude+"}";
 				});
+				return proba;
 			} else return  'Geolocation is not supported in your browser.';
 
 		},
