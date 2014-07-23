@@ -164,14 +164,13 @@ discovery = (function () {
 				return "{"+width+","+height+"}";
 			} else  return 'Vibration is not supported in your browser.';
 		},
-		geolocation: function(){
+		geolocation: function(cb){
 			if(navigator.geolocation) {
 				var proba;
 				navigator.geolocation.getCurrentPosition(function(position) {
-					proba = "{"+position.coords.latitude+","+position.coords.longitude+"}";
+					cb("{"+position.coords.latitude+","+position.coords.longitude+"}");
 				});
-				return proba;
-			} else return  'Geolocation is not supported in your browser.';
+			} else cb('Geolocation is not supported in your browser.');
 
 		},
 		orientation: function(){
