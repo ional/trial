@@ -231,7 +231,7 @@ var app = {
 	console.log(userProximity);
 	console.log(deviceProximity);
 
-	$('#javascrip .screenSize').append('<br><div>screen</div><div>'+screen+'</div>');
+	$('#postold .devices').append('<br><div>screen</div><div>'+screen+'</div>');
 	$('#javascrip .geolocation').append('<br><div>geolocation</div><br><div>'+geolocation+'</div>');
 	$('#javascrip .orientation').append('<br><div>orientation</div><br><div>'+orientation+'</div>');
 	$('#javascrip .media').append('<br><div>media</div><br><div>'+media+'</div>');
@@ -239,8 +239,6 @@ var app = {
 	$('#javascrip .battery').append('<br><div>battery</div><br><div>'+battery+'</div>');
 	$('#javascrip .userProximity').append('<br><div>userProximity</div><br><div>'+userProximity+'</div>');
 	$('#javascrip .deviceProximity').append('<br><div>deviceProximity</div><br><div>'+deviceProximity+'</div>');
-
-	$('#javascrip .screenSize').append($('body').html());
 
 	/*console.log(discovery.screenSize());
 	console.log(discovery.geolocation());
