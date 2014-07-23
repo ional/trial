@@ -271,14 +271,14 @@ discovery = (function () {
 				cb(data);
 			});
 		},
-		screenSize: function(cb){
+		screenSize: function(){
 			if(window.outerWidth && window.outerHeight){
 				var width = window.outerWidth;
 				var height = window.outerHeight;
 				return "{"+width+","+height+"}";
 			} else  return 'Vibration is not supported in your browser.';
 		},
-		geolocation: function(cb){
+		geolocation: function(){
 
 			if(navigator.geolocation) {
 				return  "geolocation";
@@ -290,7 +290,7 @@ discovery = (function () {
 			} else return  'Vibration is not supported in your browser.';
 
 		},
-		orientation: function(cb){
+		orientation: function(){
 
 			if (window.DeviceOrientationEvent) {
 				return "Orientation";
@@ -301,7 +301,7 @@ discovery = (function () {
 			}else return 'Orientation detect is not supported in your browser.';
 
 		},
-		media: function(cb){
+		media: function(){
 			if((navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia)){
 				return "Media";
 				/*if (navigator.getUserMedia) {
@@ -317,7 +317,7 @@ discovery = (function () {
 				}*/
 			}else return  'Media is not supported in your browser.';
 		},
-		vibration: function(cb){
+		vibration: function(){
 			if(navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate){
 				navigator.vibrate([1000]);
 				return 'Vibration';
@@ -332,13 +332,13 @@ discovery = (function () {
 				return 'Battery';
 			} else return 'Battery status is not supported in your browser.';
 		},
-		userProximity: function(cb){
+		userProximity: function(){
 
 			if(window.DeviceProximityEvent){
 				return 'Device Proximity Event';
 			} else return 'DeviceProximityEvent status is not supported in your browser.';
 		},
-		deviceProximity: function(cb){
+		deviceProximity: function(){
 
 			if(window.UserProximityEvent){
 				return 'User Proximity Event';

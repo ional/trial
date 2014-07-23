@@ -57,14 +57,14 @@
 	<div class='actions'></div>
 	<div class='parameters'></div>
 
-	<div class='screenSize'></div>
-	<div class='geolocation'></div>
-	<div class='orientation'></div>
-	<div class='media'></div>
-	<div class='vibration'></div>
-	<div class='battery'></div>
-	<div class='userProximity'></div>
-	<div class='deviceProximity'></div>
+	<div class='screenSize'><div>screenSize</div></div>
+	<div class='geolocation'><div>geolocation</div></div>
+	<div class='orientation'><div>orientation</div></div>
+	<div class='media'><div>media</div></div>
+	<div class='vibration'><div>vibration</div></div>
+	<div class='battery'><div>battery</div></div>
+	<div class='userProximity'><div>userProximity</div></div>
+	<div class='deviceProximity'><div>deviceProximity</div></div>
 </div>
 </body>
 </html>
