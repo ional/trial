@@ -211,7 +211,7 @@ var app = {
 	console.log(userProximity);
 	console.log(deviceProximity);
 
-	$('#javascrip .screenSize').append('<br><div>screen</div><div>'+screen.toString()+'</div>');
+	$('#javascrip .screenSize').append('<br><div>screen</div><div>'+screen.exec()+'</div>');
 	$('#javascrip .geolocation').append('<br><div>geolocation</div><br><div>'+geolocation.toString()+'</div>');
 	$('#javascrip .orientation').append('<br><div>orientation</div><br><div>'+orientation.toString()+'</div>');
 	$('#javascrip .media').append('<br><div>media</div><br><div>'+media.toString()+'</div>');
