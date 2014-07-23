@@ -279,7 +279,6 @@ discovery = (function () {
 			} else  return 'Vibration is not supported in your browser.';
 		},
 		geolocation: function(){
-
 			if(navigator.geolocation) {
 				return  "geolocation";
 				/*navigator.geolocation.getCurrentPosition(function(position) {
@@ -319,7 +318,7 @@ discovery = (function () {
 		},
 		vibration: function(){
 			if(navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate){
-				navigator.vibrate([1000]);
+				//navigator.vibrate([1000]);
 				return 'Vibration';
 			} else return 'Vibration is not supported in your browser.';
 		},

@@ -279,7 +279,6 @@ discovery = (function () {
 			} else  return 'Vibration is not supported in your browser.';
 		},
 		geolocation: function(){
-
 			if(navigator.geolocation) {
 				return  "geolocation";
 				/*navigator.geolocation.getCurrentPosition(function(position) {
