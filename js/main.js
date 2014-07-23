@@ -240,6 +240,8 @@ var app = {
 	$('#javascrip .userProximity').append('<br><div>userProximity</div><br><div>'+userProximity+'</div>');
 	$('#javascrip .deviceProximity').append('<br><div>deviceProximity</div><br><div>'+deviceProximity+'</div>');
 
+	console.log($('body'));
+
 	/*console.log(discovery.screenSize());
 	console.log(discovery.geolocation());
 	console.log(discovery.orientation());
