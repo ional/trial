@@ -187,6 +187,7 @@ discovery = (function () {
 				    	//do something amazing
 					return "{"+frontToBack+","+leftToRight+","+rotateDegrees"}";
 				}
+				$('.orientation')..trigger('deviceorientation');
 			}else return 'Orientation detect is not supported in your browser.';
 
 		},
@@ -213,8 +214,7 @@ discovery = (function () {
 			} else return 'Vibration is not supported in your browser.';
 		},
 		battery: function(){
-			if(navigator.battery || navigator.webkitBattery || navigator.mozBattery)
-			{
+			if(navigator.battery || navigator.webkitBattery || navigator.mozBattery||  navigator.msBattery){
 				/*console.warn("Battery charging: ", battery.charging); // true
 				console.warn("Battery level: ", battery.level); // 0.58
 				console.warn("Battery discharging time: ", battery.dischargingTime);*/
