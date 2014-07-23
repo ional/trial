@@ -166,7 +166,7 @@ discovery = (function () {
 		},
 		geolocation: function(){
 			if(navigator.geolocation) {
-				navigator.geolocation.getCurrentPosition(function(position) {
+				return navigator.geolocation.getCurrentPosition(function(position) {
 					return "{"+position.coords.latitude+","+position.coords.longitude+"}";
 				});
 			} else return  'Geolocation is not supported in your browser.';
@@ -174,30 +174,6 @@ discovery = (function () {
 		},
 		orientation: function(){
 			if (window.DeviceOrientationEvent) {
-				/*window.addEventListener("deviceorientation", function(event) {
-					return "{"+event.alpha+","+event.beta+","+event.gamma"}";
-			      	}, true);*/
-				/*window.addEventListener("deviceorientation", function(event) {
-					//alpha: rotation around z-axis
-					var rotateDegrees = event.alpha;
-					//gamma: left to right
-					var leftToRight = event.gamma;
-					//beta: front back motion
-					var frontToBack = event.beta;
-				    	//do something amazing
-					return "{"+frontToBack+","+leftToRight+","+rotateDegrees"}";
-				}*/
-				/*$(window).bind('deviceorientation', function() {
-				   	alert(window.orientation);
-					//alpha: rotation around z-axis
-					var rotateDegrees = event.alpha;
-					//gamma: left to right
-					var leftToRight = event.gamma;
-					//beta: front back motion
-					var frontToBack = event.beta;
-				    	//do something amazing
-					return "{"+frontToBack+","+leftToRight+","+rotateDegrees"}";
-				});*/
 				if (window.matchMedia("(orientation: portrait)").matches) {
 				   // you're in PORTRAIT mode
 					return "Portrait";
