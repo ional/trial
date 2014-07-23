@@ -167,20 +167,30 @@ discovery = (function () {
 		geolocation: function(){
 			if(navigator.geolocation) {
 				navigator.geolocation.getCurrentPosition(function(position) {
-					var lat = position.coords.latitude;
-				    	var lon = position.coords.longitude;
-					return "{"+lat+","+lon+"}";
+					return "{"+position.coords.latitude+","+position.coords.longitude+"}";
 				});
 			} else return  'Geolocation is not supported in your browser.';
 
 		},
 		orientation: function(){
 			if (window.DeviceOrientationEvent) {
-				return "Orientation";
-				//cb(window.orientation);
-				/* window.addEventListener("deviceorientation", function(event) {
-				  return {event.alpha, event.beta, event.gamma};
+				/*window.addEventListener("deviceorientation", function(event) {
+					return "{"+event.alpha+","+event.beta+","+event.gamma"}";
 			      	}, true);*/
+				window.addEventListener("deviceorientation", function(event) {
+					//alpha: rotation around z-axis
+					var rotateDegrees = event.alpha;
+					//gamma: left to right
+					var leftToRight = event.gamma;
+					//beta: front back motion
+					var frontToBack = event.beta;
+				 
+					handleOrientationEvent( frontToBack, leftToRight, rotateDegrees );
+   				 }, false);
+				var handleOrientationEvent = function( frontToBack, leftToRight, rotateDegrees ){
+				    	//do something amazing
+					return "{"+frontToBack+","+leftToRight+","+rotateDegrees"}";
+				};
 			}else return 'Orientation detect is not supported in your browser.';
 
 		},
