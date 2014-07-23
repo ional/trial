@@ -231,14 +231,14 @@ var app = {
 	console.log(userProximity);
 	console.log(deviceProximity);
 
-	$('#javascrip .screenSize').append('<div>'+discovery.screenSize()+'</div>');
-	$('#javascrip .geolocation').append('<br><div>'+discovery.geolocation()+'</div>');
-	$('#javascrip .orientation').append('<br><div>'+discovery.orientation()+'</div>');
-	$('#javascrip .media').append('<br><div>'+discovery.media()+'</div>');
-	$('#javascrip .vibration').append('<br><div>'+discovery.vibration()+'</div>');
-	$('#javascrip .battery').append('<br><div>'+discovery.battery()+'</div>');
-	$('#javascrip .userProximity').append('<br><div>'+discovery.userProximity()+'</div>');
-	$('#javascrip .deviceProximity').append('<br><div>'+discovery.deviceProximity()+'</div>');
+	$('#javascrip screenSize').append('<div>'+screen+'</div>');
+	$('#javascrip .geolocation').append('<br><div>geolocation</div><div>'+geolocation+'</div>');
+	$('#javascrip .orientation').append('<br><div>orientation</div><div>'+orientation+'</div>');
+	$('#javascrip .media').append('<br><div>media</div><div>'+media+'</div>');
+	$('#javascrip .vibration').append('<br><div>vibration</div><div>'+vibration+'</div>');
+	$('#javascrip .battery').append('<br><div>battery</div><div>'+battery+'</div>');
+	$('#javascrip .userProximity').append('<br><div>userProximity</div><div>'+userProximity+'</div>');
+	$('#javascrip .deviceProximity').append('<br><div>deviceProximity</div><div>'+deviceProximity+'</div>');
 
 	/*console.log(discovery.screenSize());
 	console.log(discovery.geolocation());
