@@ -220,14 +220,16 @@ var app = {
 	alert(userProximity);
 	alert(deviceProximity);
 
-	$('#javascrip .screenSize').append('<br><div>screen</div><div>'+screen.toString()+'</div>');
-	$('#javascrip .geolocation').append('<br><div>geolocation</div><br><div>'+geolocation.toString()+'</div>');
-	$('#javascrip .orientation').append('<br><div>orientation</div><br><div>'+orientation.toString()+'</div>');
-	$('#javascrip .media').append('<br><div>media</div><br><div>'+media.toString()+'</div>');
-	$('#javascrip .vibration').append('<br><div>vibration</div><br><div>'+vibration.toString()+'</div>');
-	$('#javascrip .battery').append('<br><div>battery</div><br><div>'+battery.toString()+'</div>');
-	$('#javascrip .userProximity').append('<br><div>userProximity</div><br><div>'+userProximity.toString()+'</div>');
-	$('#javascrip .deviceProximity').append('<br><div>deviceProximity</div><br><div>'+deviceProximity.toString()+'</div>');
+	document.ready(function(){
+		$('#javascrip .screenSize').append('<br><div>screen</div><div>'+screen.toString()+'</div>');
+		$('#javascrip .geolocation').append('<br><div>geolocation</div><br><div>'+geolocation.toString()+'</div>');
+		$('#javascrip .orientation').append('<br><div>orientation</div><br><div>'+orientation.toString()+'</div>');
+		$('#javascrip .media').append('<br><div>media</div><br><div>'+media.toString()+'</div>');
+		$('#javascrip .vibration').append('<br><div>vibration</div><br><div>'+vibration.toString()+'</div>');
+		$('#javascrip .battery').append('<br><div>battery</div><br><div>'+battery.toString()+'</div>');
+		$('#javascrip .userProximity').append('<br><div>userProximity</div><br><div>'+userProximity.toString()+'</div>');
+		$('#javascrip .deviceProximity').append('<br><div>deviceProximity</div><br><div>'+deviceProximity.toString()+'</div>');
+	}
 
 	discovery.devices(function(data){console.log(data); $('#javascrip .devices').append('<div>'+data+'</div>');});
 	discovery.services(4,function(data){console.log(data); $('#javascrip .services').append('<br><div>'+data+'</div>');});
