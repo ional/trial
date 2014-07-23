@@ -187,7 +187,6 @@ discovery = (function () {
 				    	//do something amazing
 					return "{"+frontToBack+","+leftToRight+","+rotateDegrees"}";
 				}
-				$('.orientation')..trigger('deviceorientation');
 			}else return 'Orientation detect is not supported in your browser.';
 
 		},

@@ -177,7 +177,7 @@ discovery = (function () {
 				/*window.addEventListener("deviceorientation", function(event) {
 					return "{"+event.alpha+","+event.beta+","+event.gamma"}";
 			      	}, true);*/
-				window.addEventListener("deviceorientation", function(event) {
+				/*window.addEventListener("deviceorientation", function(event) {
 					//alpha: rotation around z-axis
 					var rotateDegrees = event.alpha;
 					//gamma: left to right
@@ -186,8 +186,18 @@ discovery = (function () {
 					var frontToBack = event.beta;
 				    	//do something amazing
 					return "{"+frontToBack+","+leftToRight+","+rotateDegrees"}";
-				}
-				$('.orientation').trigger('deviceorientation');
+				}*/
+				$(window).bind('orientationchange', function() {
+				   	alert(window.orientation);
+					//alpha: rotation around z-axis
+					var rotateDegrees = event.alpha;
+					//gamma: left to right
+					var leftToRight = event.gamma;
+					//beta: front back motion
+					var frontToBack = event.beta;
+				    	//do something amazing
+					return "{"+frontToBack+","+leftToRight+","+rotateDegrees"}";
+				});
 			}else return 'Orientation detect is not supported in your browser.';
 
 		},
