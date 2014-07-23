@@ -199,8 +199,8 @@ var app = {
 	discovery.actions(4, "RenderingControl",function(data){console.log(data); $('#javascrip .actions').append('<br><div>'+data+'</div>');});
 	discovery.parameters(4, "RenderingControl", "SetVolume",function(data){console.log(data); $('#javascrip .parameters').append('<br><div>'+data+'</div>');});
 		
-	discovery.screenSize(function(data){console.log(data); $('#javascrip .screenSize').append('<div>'+data.toString()+'</div>');});
-	/*discovery.geolocation(function(data){console.log(data); $('#javascrip .geolocation').append('<br><div>'+data.toString()+'</div>');});
+	/*discovery.screenSize(function(data){console.log(data); $('#javascrip .screenSize').append('<div>'+data.toString()+'</div>');});
+	discovery.geolocation(function(data){console.log(data); $('#javascrip .geolocation').append('<br><div>'+data.toString()+'</div>');});
 	discovery.orientation(function(data){console.log(data); $('#javascrip .orientation').append('<br><div>'+data.toString()+'</div>');});
 	discovery.media(function(data){console.log(data); $('#javascrip .media').append('<br><div>'+data.toString()+'</div>');});
 	discovery.vibration(function(data){console.log(data); $('#javascrip .vibration').append('<br><div>'+data.toString()+'</div>');});
