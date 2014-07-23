@@ -272,9 +272,10 @@ discovery = (function () {
 		},
 		screenSize: function(){
 			if(window.outerWidth && window.outerHeight){
-				var width = window.outerWidth;
+				/*var width = window.outerWidth;
 				var height = window.outerHeight;
-				return "{"+width+","+height+"}";
+				return "{"+width+","+height+"}";*/
+				return "screenSize";
 			} else  return 'Vibration is not supported in your browser.';
 		},
 		geolocation: function(){
