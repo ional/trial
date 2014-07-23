@@ -187,7 +187,7 @@ discovery = (function () {
 				    	//do something amazing
 					return "{"+frontToBack+","+leftToRight+","+rotateDegrees"}";
 				}*/
-				$(window).bind('orientationchange', function() {
+				/*$(window).bind('deviceorientation', function() {
 				   	alert(window.orientation);
 					//alpha: rotation around z-axis
 					var rotateDegrees = event.alpha;
@@ -197,7 +197,16 @@ discovery = (function () {
 					var frontToBack = event.beta;
 				    	//do something amazing
 					return "{"+frontToBack+","+leftToRight+","+rotateDegrees"}";
-				});
+				});*/
+				if (window.matchMedia("(orientation: portrait)").matches) {
+				   // you're in PORTRAIT mode
+					return "Portrait";
+				}
+
+				if (window.matchMedia("(orientation: landscape)").matches) {
+				   // you're in LANDSCAPE mode
+					return "Landscape";
+				}
 			}else return 'Orientation detect is not supported in your browser.';
 
 		},
