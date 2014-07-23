@@ -20,7 +20,7 @@ var app = {
 	//var dicovery = new Discovery();
         //$('.search-key').on('keyup', $.proxy(this.findByName, this));
 
-	$.post('http://localhost:8182/discoveragent/upnp?devices', function(data) {
+	/*$.post('http://localhost:8182/discoveragent/upnp?devices', function(data) {
 		//it works, do something with the data
 		$('#postold .devices').append('<div>http://localhost:8182/discoveragent/upnp?devices</div><br><div>'+data+'</div>');
 	});
@@ -131,7 +131,7 @@ var app = {
 	$.get('http://localhost:8182/discoveragent/upnp/parameters?device=4&service=RenderingControl&action=SetVolume', function(data) {
 		//it works, do something with the data
 		$('#getnew .parameters').append('<br><div>http://localhost:8182/discoveragent/upnp/parameters?device=4&service=RenderingControl&action=SetVolume</div><br><div>'+data+'</div>');
-	});
+	});*/
 	/*$.ajax({
 		type: "POST",
     		url: 'http://localhost:8182/discoveragent/upnp?proba',
