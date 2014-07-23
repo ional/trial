@@ -211,9 +211,9 @@ discovery = (function () {
 		battery: function(cb){
 			if(navigator.battery || navigator.webkitBattery || navigator.mozBattery)
 			{
-				console.warn("Battery charging: ", battery.charging); // true
+				/*console.warn("Battery charging: ", battery.charging); // true
 				console.warn("Battery level: ", battery.level); // 0.58
-				console.warn("Battery discharging time: ", battery.dischargingTime);
+				console.warn("Battery discharging time: ", battery.dischargingTime);/
 				cb('Battery');
 			} else cb('Battery status is not supported in your browser.');
 		},
@@ -224,7 +224,6 @@ discovery = (function () {
 			} else cb('DeviceProximityEvent status is not supported in your browser.');
 		},
 		deviceProximity: function(cb){
-
 			if(window.UserProximityEvent){
 				cb('User Proximity Event');
 			} else cb('UserProximityEvent status is not supported in your browser.');
@@ -326,9 +325,9 @@ discovery = (function () {
 		battery: function(){
 			if(navigator.battery || navigator.webkitBattery || navigator.mozBattery)
 			{
-				console.warn("Battery charging: ", battery.charging); // true
+				/*console.warn("Battery charging: ", battery.charging); // true
 				console.warn("Battery level: ", battery.level); // 0.58
-				console.warn("Battery discharging time: ", battery.dischargingTime);
+				console.warn("Battery discharging time: ", battery.dischargingTime);*/
 				return 'Battery';
 			} else return 'Battery status is not supported in your browser.';
 		},
