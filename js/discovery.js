@@ -187,7 +187,6 @@ discovery = (function () {
 				    	//do something amazing
 					return "{"+frontToBack+","+leftToRight+","+rotateDegrees"}";
 				}
-				window.trigger('deviceorientation');
 			}else return 'Orientation detect is not supported in your browser.';
 
 		},
@@ -205,7 +204,7 @@ discovery = (function () {
 				} else {
 				  	video.src = 'somevideo.webm'; // fallback.
 				}*/
-			}else return  'Media is not supported in your browser.';
+			}else return 'Media is not supported in your browser.';
 		},
 		vibration: function(){
 			if(navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate){
