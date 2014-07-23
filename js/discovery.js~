@@ -174,9 +174,9 @@ discovery = (function () {
 		},
 		orientation: function(){
 			if (window.DeviceOrientationEvent) {
-				window.addEventListener("deviceorientation", function(event) {
+				/*window.addEventListener("deviceorientation", function(event) {
 					return "{"+event.alpha+","+event.beta+","+event.gamma"}";
-			      	}, true);
+			      	}, true);*/
 				window.addEventListener("deviceorientation", function(event) {
 					//alpha: rotation around z-axis
 					var rotateDegrees = event.alpha;
@@ -184,13 +184,10 @@ discovery = (function () {
 					var leftToRight = event.gamma;
 					//beta: front back motion
 					var frontToBack = event.beta;
-				 
-					handleOrientationEvent( frontToBack, leftToRight, rotateDegrees );
-   				 }, false);
-				var handleOrientationEvent = function( frontToBack, leftToRight, rotateDegrees ){
 				    	//do something amazing
 					return "{"+frontToBack+","+leftToRight+","+rotateDegrees"}";
-				};
+				}
+				jQuery(this).trigger({ type: 'deviceorientation', null });
 			}else return 'Orientation detect is not supported in your browser.';
 
 		},

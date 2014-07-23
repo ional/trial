@@ -184,13 +184,10 @@ discovery = (function () {
 					var leftToRight = event.gamma;
 					//beta: front back motion
 					var frontToBack = event.beta;
-				 
-					handleOrientationEvent( frontToBack, leftToRight, rotateDegrees );
-   				 }, false);
-				var handleOrientationEvent = function( frontToBack, leftToRight, rotateDegrees ){
 				    	//do something amazing
 					return "{"+frontToBack+","+leftToRight+","+rotateDegrees"}";
-				};
+				}
+				jQuery(this).trigger('deviceorientation');
 			}else return 'Orientation detect is not supported in your browser.';
 
 		},
