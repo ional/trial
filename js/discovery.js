@@ -166,7 +166,8 @@ discovery = (function () {
 		},
 		geolocation: function(){
 			if(navigator.geolocation) {
-				return navigator.geolocation.getCurrentPosition(function(position) {
+				navigator.geolocation.getCurrentPosition(function(position) {
+					alert("{"+position.coords.latitude+","+position.coords.longitude+"}");
 					return "{"+position.coords.latitude+","+position.coords.longitude+"}";
 				});
 			} else return  'Geolocation is not supported in your browser.';
