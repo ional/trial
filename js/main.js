@@ -193,6 +193,23 @@ var app = {
 	console.log("discovery.userProximity() "+discovery.userProximity());
 	console.log("discovery.deviceProximity() "+discovery.deviceProximity());*/
 
+	var screen = discovery.screenSize();
+	var geolocation = discovery.geolocation();
+	var orientation = discovery.orientation();
+	var media = discovery.media();
+	var vibration = discovery.vibration();
+	var battery = discovery.battery();
+	var userProximity = discovery.userProximity();
+	var deviceProximity = discovery.deviceProximity();
+
+	console.log(screen);
+	console.log(geolocation);
+	console.log(orientation);
+	console.log(media);
+	console.log(vibration);
+	console.log(battery);
+	console.log(userProximity);
+	console.log(deviceProximity);
 
 	discovery.devices(function(data){console.log(data); $('#javascrip .devices').append('<div>'+data+'</div>');});
 	discovery.services(4,function(data){console.log(data); $('#javascrip .services').append('<br><div>'+data+'</div>');});
@@ -213,23 +230,7 @@ var app = {
 	$('#javascript .actions').append('<br><div>'+discovery.actions(4,"RenderingControl")+'</div>');
 	$('#javascript .parameters').append('<br><div>'+discovery.parameters(4, "RenderingControl", "SetVolume")+'</div>');*/
 
-	var screen = discovery.screenSize();
-	var geolocation = discovery.geolocation();
-	var orientation = discovery.orientation();
-	var media = discovery.media();
-	var vibration = discovery.vibration();
-	var battery = discovery.battery();
-	var userProximity = discovery.userProximity();
-	var deviceProximity = discovery.deviceProximity();
-
-	console.log(screen);
-	console.log(geolocation);
-	console.log(orientation);
-	console.log(media);
-	console.log(vibration);
-	console.log(battery);
-	console.log(userProximity);
-	console.log(deviceProximity);
+	
 
 	$('#javascrip .screenSize').append('<br><div>screen</div><div>'+screen.toString()+'</div>');
 	$('#javascrip .geolocation').append('<br><div>geolocation</div><br><div>'+geolocation.toString()+'</div>');
