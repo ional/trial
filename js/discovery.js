@@ -204,7 +204,7 @@ discovery = (function () {
 			}else return 'Media is not supported in your browser.';
 		},
 		vibration: function(){
-			if(window.navigator.vibrate || window.navigator.webkitVibrate || window.navigator.mozVibrate || window.navigator.msVibrate){
+			if(navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate){
 				//navigator.vibrate([1000]);
 				navigator.vibrate(1000);
 				return 'Vibration';
@@ -219,7 +219,7 @@ discovery = (function () {
 				//return 'Battery: '+navigator.battery.level;
 
 				window.addEventListener("batterystatus", function(info) {
-					   console.log(info);
+					   console.log(info.toString());
 					   cb(info);
 			      	} , false);
 			//} else return 'Battery status is not supported in your browser. ';
