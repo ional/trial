@@ -204,18 +204,18 @@ discovery = (function () {
 			}else return 'Media is not supported in your browser.';
 		},
 		vibration: function(){
-			if(navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate){
+			if(window.navigator.vibrate || window.navigator.webkitVibrate || window.navigator.mozVibrate || window.navigator.msVibrate){
 				//navigator.vibrate([1000]);
 				return 'Vibration';
 			} else return 'Vibration is not supported in your browser.';
 		},
 		battery: function(){
-			if(navigator.battery || navigator.webkitBattery || navigator.mozBattery|| navigator.msBattery){
+			if(window.navigator.battery || window.navigator.webkitBattery || window.navigator.mozBattery || window.navigator.msBattery){
 				/*console.warn("Battery charging: ", battery.charging); // true
 				console.warn("Battery level: ", battery.level); // 0.58
 				console.warn("Battery discharging time: ", battery.dischargingTime);*/
-				return 'Battery';
-			} else return 'Battery status is not supported in your browser.';
+				return 'Battery: '+navigator.battery;
+			} else return 'Battery status is not supported in your browser. '+navigator.battery;
 		},
 		userProximity: function(){
 			if(window.DeviceProximityEvent){
@@ -228,8 +228,8 @@ discovery = (function () {
 			} else return 'UserProximityEvent status is not supported in your browser.';
 		},
 		language: function(){
-			if(navigator.language ){
-				return 'Language';
+			if(navigator.language){
+				return 'Language: '+navigator.language;
 			} else return 'Language is not supported in your browser.';
 		},
 		camera: function(){
