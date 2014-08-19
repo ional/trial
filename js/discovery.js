@@ -210,7 +210,7 @@ discovery = (function () {
 			} else return 'Vibration is not supported in your browser.';
 		},
 		battery: function(cb){
-			//if(navigator.battery || navigator.webkitBattery || navigator.mozBattery || window.navigator.msBattery){
+			if(navigator.battery || navigator.webkitBattery || navigator.mozBattery || window.navigator.msBattery ){
 			//if(battStat){
 				/*console.warn("Battery charging: ", battery.charging); // true
 				console.warn("Battery level: ", battery.level); // 0.58
@@ -221,7 +221,7 @@ discovery = (function () {
 					   console.log(info.toString());
 					   cb(info.toString());
 			      	} , false);
-			//} else return 'Battery status is not supported in your browser. ';
+			} else return 'Battery status is not supported in your browser. ';
 		},
 		userProximity: function(){
 			if(window.DeviceProximityEvent){
