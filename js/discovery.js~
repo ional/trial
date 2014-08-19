@@ -206,7 +206,7 @@ discovery = (function () {
 		vibration: function(){
 			if(navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate){
 				//navigator.vibrate([1000]);
-				navigator.vibrate(1000);
+				navigator.notification.vibrate(1000);
 				return 'Vibration';
 			} else return 'Vibration is not supported in your browser.';
 		},
@@ -219,7 +219,7 @@ discovery = (function () {
 				//return 'Battery: '+navigator.battery.level;
 
 				window.addEventListener("batterystatus", function(info) {
-					   console.log(info);
+					   console.log(info.toString());
 					   cb(info);
 			      	} , false);
 			//} else return 'Battery status is not supported in your browser. ';
