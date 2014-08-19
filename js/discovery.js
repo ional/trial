@@ -115,7 +115,7 @@ discovery = (function () {
 	}
 
 	var discovery={
-
+		
 		get: function (selector) {
 			return new Dicovery();
 		},
@@ -210,13 +210,19 @@ discovery = (function () {
 				return 'Vibration';
 			} else return 'Vibration is not supported in your browser.';
 		},
-		battery: function(){
-			if(window.navigator.battery || window.navigator.webkitBattery || window.navigator.mozBattery || window.navigator.msBattery){
+		battery: function(cb){
+			//if(navigator.battery || navigator.webkitBattery || navigator.mozBattery || window.navigator.msBattery){
+			//if(battStat){
 				/*console.warn("Battery charging: ", battery.charging); // true
 				console.warn("Battery level: ", battery.level); // 0.58
 				console.warn("Battery discharging time: ", battery.dischargingTime);*/
-				return 'Battery: '+navigator.battery;
-			} else return 'Battery status is not supported in your browser. '+navigator.battery;
+				//return 'Battery: '+navigator.battery.level;
+
+				window.addEventListener("batterystatus", function(info) {
+					   console.log(info);
+					   cb(info);
+			      	} , false);
+			//} else return 'Battery status is not supported in your browser. ';
 		},
 		userProximity: function(){
 			if(window.DeviceProximityEvent){
