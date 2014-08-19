@@ -204,7 +204,7 @@ var app = {
 		var deviceProximity = discovery.deviceProximity();
 
 		console.log(screen);
-		//console.log(geolocation);
+		if(geolocation) console.log(geolocation);
 		console.log(orientation);
 		console.log(media);
 		console.log(vibration);
@@ -213,7 +213,7 @@ var app = {
 		console.log(deviceProximity);
 	
 		$('#javascrip .screenSize').append('<br><div>screen:</div><div>'+screen+'</div>');
-		//$('#javascrip .geolocation').append('<br><div>geolocation:</div><br><div>'+geolocation+'</div>');
+		if(geolocation) $('#javascrip .geolocation').append('<br><div>geolocation:</div><br><div>'+geolocation+'</div>');
 		$('#javascrip .orientation').append('<br><div>orientation:</div><br><div>'+orientation+'</div>');
 		$('#javascrip .media').append('<br><div>media:</div><br><div>'+media+'</div>');
 		$('#javascrip .vibration').append('<br><div>vibration:</div><br><div>'+vibration+'</div>');
