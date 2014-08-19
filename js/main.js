@@ -201,8 +201,9 @@ var app = {
 		var vibration = discovery.vibration();
 		var battery = discovery.battery();
 		var userProximity = discovery.userProximity();
+		var deviceProximity = discovery.deviceProximity();
 		var language = discovery.language();
-		//var camera = discovery.camera();
+		var camera = discovery.camera();
 
 		console.log(screen);
 		if(geolocation) console.log(geolocation);
@@ -213,7 +214,7 @@ var app = {
 		console.log(userProximity);
 		console.log(deviceProximity);
 		console.log(language);
-		//console.log(camera);
+		console.log(camera);
 	
 		$('#javascrip .screenSize').append('<br><div>screen:</div><div>'+screen+'</div>');
 		if(geolocation) $('#javascrip .geolocation').append('<br><div>geolocation:</div><br><div>'+geolocation+'</div>');
@@ -224,7 +225,7 @@ var app = {
 		$('#javascrip .userProximity').append('<br><div>userProximity:</div><br><div>'+userProximity+'</div>');
 		$('#javascrip .deviceProximity').append('<br><div>deviceProximity:</div><br><div>'+deviceProximity+'</div>');
 		$('#javascrip .language').append('<br><div>language:</div><br><div>'+language+'</div>');
-		//$('#javascrip .camera').append('<br><div>camera:</div><br><div>'+camera+'</div>');
+		$('#javascrip .camera').append('<br><div>camera:</div><br><div>'+camera+'</div>');
 	});
 
 	discovery.devices(function(data){console.log(data); $('#javascrip .devices').append('<div>'+data+'</div>');});
