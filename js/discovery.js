@@ -228,13 +228,12 @@ discovery = (function () {
 			if(window.UserProximityEvent){
 				return 'User Proximity Event';
 			} else return 'UserProximityEvent status is not supported in your browser.';
-		}
+		},
 		language: function(){
 			if(window.navigator.language ){
-				//navigator.vibrate([1000]);
 				return 'Language';
 			} else return 'Language is not supported in your browser.';
-		},
+		}
 	}
 	/*Discovery.prototype.devices = function () {
 	    	//function code
