@@ -233,6 +233,11 @@ discovery = (function () {
 			if(window.navigator.language ){
 				return 'Language';
 			} else return 'Language is not supported in your browser.';
+		},
+		camera: function(){
+			if(window.navigator.camera ){
+				return 'Camera';
+			} else return 'Camera is not supported in your browser.';
 		}
 	}
 	/*Discovery.prototype.devices = function () {

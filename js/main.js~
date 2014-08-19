@@ -201,7 +201,8 @@ var app = {
 		var vibration = discovery.vibration();
 		var battery = discovery.battery();
 		var userProximity = discovery.userProximity();
-		var deviceProximity = discovery.deviceProximity();
+		var language = discovery.language();
+		var camera = discovery.camera();
 
 		console.log(screen);
 		if(geolocation) console.log(geolocation);
