@@ -218,7 +218,6 @@ discovery = (function () {
 			} else return 'Battery status is not supported in your browser.';
 		},
 		userProximity: function(){
-
 			if(window.DeviceProximityEvent){
 				return 'Device Proximity Event';
 			} else return 'DeviceProximityEvent status is not supported in your browser.';
@@ -233,12 +232,12 @@ discovery = (function () {
 			if(navigator.language ){
 				return 'Language';
 			} else return 'Language is not supported in your browser.';
-		},
+		}/*,
 		camera: function(){
-			if(navigator.camera ){
+			if(navigator.camera){
 				return 'Camera';
 			} else return 'Camera is not supported in your browser.';
-		}
+		}*/
 	}
 	/*Discovery.prototype.devices = function () {
 	    	//function code

@@ -212,6 +212,8 @@ var app = {
 		console.log(battery);
 		console.log(userProximity);
 		console.log(deviceProximity);
+		console.log(language);
+		console.log(camera);
 	
 		$('#javascrip .screenSize').append('<br><div>screen:</div><div>'+screen+'</div>');
 		if(geolocation) $('#javascrip .geolocation').append('<br><div>geolocation:</div><br><div>'+geolocation+'</div>');
@@ -221,6 +223,8 @@ var app = {
 		$('#javascrip .battery').append('<br><div>battery:</div><br><div>'+battery+'</div>');
 		$('#javascrip .userProximity').append('<br><div>userProximity:</div><br><div>'+userProximity+'</div>');
 		$('#javascrip .deviceProximity').append('<br><div>deviceProximity:</div><br><div>'+deviceProximity+'</div>');
+		$('#javascrip .language').append('<br><div>language:</div><br><div>'+language+'</div>');
+		$('#javascrip .camera').append('<br><div>camera:</div><br><div>'+camera+'</div>');
 	});
 
 	discovery.devices(function(data){console.log(data); $('#javascrip .devices').append('<div>'+data+'</div>');});
