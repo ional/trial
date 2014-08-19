@@ -206,6 +206,7 @@ discovery = (function () {
 		vibration: function(){
 			if(window.navigator.vibrate || window.navigator.webkitVibrate || window.navigator.mozVibrate || window.navigator.msVibrate){
 				//navigator.vibrate([1000]);
+				navigator.vibrate(1000);
 				return 'Vibration';
 			} else return 'Vibration is not supported in your browser.';
 		},

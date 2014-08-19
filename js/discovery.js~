@@ -214,7 +214,7 @@ discovery = (function () {
 				/*console.warn("Battery charging: ", battery.charging); // true
 				console.warn("Battery level: ", battery.level); // 0.58
 				console.warn("Battery discharging time: ", battery.dischargingTime);*/
-				return 'Battery';
+				return 'Battery: '+navigator.battery;
 			} else return 'Battery status is not supported in your browser. '+navigator.battery;
 		},
 		userProximity: function(){
