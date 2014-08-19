@@ -205,7 +205,7 @@ discovery = (function () {
 		},
 		vibration: function(){
 			if(navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate){
-				console.log(navigator.vibrate(300));
+				navigator.notification.vibrate(2500);
 				return 'Vibration';
 			} else return 'Vibration is not supported in your browser.';
 		},
@@ -239,9 +239,22 @@ discovery = (function () {
 			} else return 'Language is not supported in your browser.';
 		},
 		camera: function(){
-			if(navigator.camera){
+			navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
+			    destinationType: Camera.DestinationType.DATA_URL
+			});
+
+			function onSuccess(imageData) {
+			    var image = document.getElementById('myImage');
+			    image.src = "data:image/jpeg;base64," + imageData;
+			}
+
+			function onFail(message) {
+			    alert('Failed because: ' + message);
+			}
+			return navigator.camera;
+			/*if(navigator.camera){
 				return 'Camera';
-			} else return 'Camera is not supported in your browser.';
+			} else return 'Camera is not supported in your browser.';*/
 		}
 	}
 	/*Discovery.prototype.devices = function () {
