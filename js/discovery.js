@@ -239,7 +239,7 @@ discovery = (function () {
 			} else return 'Language is not supported in your browser.';
 		},
 		camera: function(){
-			navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
+			/*navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
 			    destinationType: Camera.DestinationType.DATA_URL
 			});
 
@@ -251,11 +251,12 @@ discovery = (function () {
 
 			function onFail(message) {
 			    alert('Failed because: ' + message);
-			}
+			    return "Error";
+			}*/
 			//return navigator.camera;
-			/*if(navigator.camera){
+			if(navigator.camera){
 				return 'Camera';
-			} else return 'Camera is not supported in your browser.';*/
+			} else return 'Camera is not supported in your browser.';
 		}
 	}
 	/*Discovery.prototype.devices = function () {
