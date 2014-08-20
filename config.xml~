@@ -4,10 +4,10 @@
     <description>
         Trial application to get ajax information by POST.
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
+    <author email="ialberdi@vicomtech.org" href="http://www.vicomtech.org">
         Ion Alberdi Bartolome
     </author>
-    <!--<preference name="permissions" value="none" />-->
+    <preference name="permissions" value="none" />
     <preference name="phonegap-version" value="3.5.0" />
     <preference name="orientation" value="default" />
     <preference name="target-device" value="universal" />
@@ -23,6 +23,7 @@
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="7" />
     <preference name="android-installLocation" value="auto" />
+    <gap:platform name="android" />
     <!--<gap:plugin name="org.apache.cordova.battery-status" />
     <gap:plugin name="org.apache.cordova.camera" /> 
     <gap:plugin name="org.apache.cordova.media-capture" />
@@ -41,24 +42,24 @@
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.vibration" />-->
-    <gap:plugin name="org.apache.cordova.core.battery-status" version="0.2.7" />
-    <gap:plugin name="org.apache.cordova.core.camera" version="0.2.9" />
-    <gap:plugin name="org.apache.cordova.core.console" version="0.2.7" />
-    <gap:plugin name="org.apache.cordova.core.contacts" version="0.2.9" />
-    <gap:plugin name="org.apache.cordova.core.device" version="0.2.8" />
-    <gap:plugin name="org.apache.cordova.core.device-motion" version="0.2.6" />
-    <gap:plugin name="org.apache.cordova.core.device-orientation" version="0.3.5" />
-    <gap:plugin name="org.apache.cordova.core.dialogs" version="0.2.6" />
-    <gap:plugin name="org.apache.cordova.core.file" version="1.0.1" />
-    <gap:plugin name="org.apache.cordova.core.file-transfer" version="0.4.2" />
-    <gap:plugin name="org.apache.cordova.core.geolocation" version="0.3.7" />
-    <gap:plugin name="org.apache.cordova.core.globalization" version="0.2.6" />
-    <gap:plugin name="org.apache.cordova.core.inappbrowser" version="0.3.3" />
-    <gap:plugin name="org.apache.cordova.core.media" version="0.2.8" />
-    <gap:plugin name="org.apache.cordova.core.media-capture" version="0.2.8" />
-    <gap:plugin name="org.apache.cordova.core.network-information" version="0.2.7" />
-    <gap:plugin name="org.apache.cordova.core.splashscreen" version="0.2.7" />
-    <gap:plugin name="org.apache.cordova.core.vibration" version="0.3.7" />
+    <gap:plugin name="org.apache.cordova.battery-status" version="0.2.7" />
+    <gap:plugin name="org.apache.cordova.camera" version="0.2.9" />
+    <gap:plugin name="org.apache.cordova.console" version="0.2.7" />
+    <gap:plugin name="org.apache.cordova.contacts" version="0.2.9" />
+    <gap:plugin name="org.apache.cordova.device" version="0.2.8" />
+    <gap:plugin name="org.apache.cordova.device-motion" version="0.2.6" />
+    <gap:plugin name="org.apache.cordova.device-orientation" version="0.3.5" />
+    <gap:plugin name="org.apache.cordova.dialogs" version="0.2.6" />
+    <gap:plugin name="org.apache.cordova.file" version="1.0.1" />
+    <gap:plugin name="org.apache.cordova.file-transfer" version="0.4.2" />
+    <gap:plugin name="org.apache.cordova.geolocation" version="0.3.7" />
+    <gap:plugin name="org.apache.cordova.globalization" version="0.2.6" />
+    <gap:plugin name="org.apache.cordova.inappbrowser" version="0.3.3" />
+    <gap:plugin name="org.apache.cordova.media" version="0.2.8" />
+    <gap:plugin name="org.apache.cordova.media-capture" version="0.2.8" />
+    <gap:plugin name="org.apache.cordova.network-information" version="0.2.7" />
+    <gap:plugin name="org.apache.cordova.splashscreen" version="0.2.7" />
+    <gap:plugin name="org.apache.cordova.vibration" version="0.3.7" />
 
     <icon src="icon.png" />
     <icon gap:platform="android" gap:qualifier="ldpi" src="res/icon/android/icon-36-ldpi.png" />
@@ -85,5 +86,6 @@
     <gap:splash gap:platform="ios" height="1024" src="res/screen/ios/screen-ipad-portrait.png" width="768" />
     <gap:splash gap:platform="ios" height="768" src="res/screen/ios/screen-ipad-landscape.png" width="1024" />
     <gap:splash gap:platform="winphone" src="res/screen/windows-phone/screen-portrait.jpg" />
-    <access origin="*" />
+    <access origin="http://127.0.0.1*"/>
+    <!--<access origin="*" />-->
 </widget>
