@@ -168,7 +168,7 @@ discovery = (function () {
 			if(navigator.geolocation) {
 				var proba;
 				navigator.geolocation.getCurrentPosition(function(position) {
-					cb("{"+position.coords.latitude+","+position.coords.longitude+"}");
+					cb("{"+position.coords.latitude.toString()+","+position.coords.longitude.toString()+"}");
 				});
 			} else cb('Geolocation is not supported in your browser.');
 
