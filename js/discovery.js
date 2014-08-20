@@ -218,7 +218,7 @@ discovery = (function () {
 				//return 'Battery: '+navigator.battery.level;
 
 				window.addEventListener("batterystatus", function(info) {
-					   console.log(info.toString());
+					   console.log("Probando:    "+info.toString());
 					   cb(info.toString());
 			      	} , false);
 			} else return 'Battery status is not supported in your browser. ';
@@ -246,12 +246,13 @@ discovery = (function () {
 			function onSuccess(imageData) {
 			    var image = document.getElementById('myImage');
 			    image.src = "data:image/jpeg;base64," + imageData;
+			    return imageData.toString();
 			}
 
 			function onFail(message) {
 			    alert('Failed because: ' + message);
 			}
-			return navigator.camera;
+			//return navigator.camera;
 			/*if(navigator.camera){
 				return 'Camera';
 			} else return 'Camera is not supported in your browser.';*/
