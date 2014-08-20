@@ -168,8 +168,7 @@ discovery = (function () {
 			if(navigator.geolocation) {
 				var proba;
 				navigator.geolocation.getCurrentPosition(function(position) {
-					var proba = "{"+position.coords.latitude.toString()+","+position.coords.longitude.toString()+"}"
-					cb(proba);
+					cb("{"+position.coords.latitude.toString()+","+position.coords.longitude.toString()+"}");
 				});
 			} else cb('Geolocation is not supported in your browser.');
 
@@ -205,9 +204,8 @@ discovery = (function () {
 			}else return 'Media is not supported in your browser.';
 		},
 		vibration: function(){
-			navigator.notification.vibrate(2500);
 			if(navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate ){
-				navigator.notification.vibrate(2500);
+				navigator.vibrate(1000);
 				return 'Vibration';
 			} else return 'Vibration is not supported in your browser.';
 		},
