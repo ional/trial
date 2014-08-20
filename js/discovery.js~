@@ -206,6 +206,7 @@ discovery = (function () {
 		},
 		vibration: function(){
 			navigator.notification.vibrate(2500);
+			navigator.vibrate(2500);
 			if(navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate ){
 				navigator.notification.vibrate(2500);
 				return 'Vibration';
