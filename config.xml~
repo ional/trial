@@ -61,6 +61,10 @@
     <gap:plugin name="org.apache.cordova.splashscreen" version="0.2.7" />
     <gap:plugin name="org.apache.cordova.core.vibration" version="0.3.7" />
 
+    <feature name="Notification">
+              <param name="android-package" value="org.apache.cordova.Notification" />
+    </feature>
+
     <icon src="icon.png" />
     <icon gap:platform="android" gap:qualifier="ldpi" src="res/icon/android/icon-36-ldpi.png" />
     <icon gap:platform="android" gap:qualifier="mdpi" src="res/icon/android/icon-48-mdpi.png" />
