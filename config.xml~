@@ -7,6 +7,7 @@
     <author email="ialberdi@vicomtech.org" href="http://www.vicomtech.org">
         Ion Alberdi Bartolome
     </author>
+
     <preference name="permissions" value="none" />
     <preference name="phonegap-version" value="3.5.0" />
     <preference name="orientation" value="default" />
@@ -23,8 +24,12 @@
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="7" />
     <preference name="android-installLocation" value="auto" />
+
     <gap:platform name="ios" />
     <gap:platform name="android" />
+    <gap:platform name="webos" />
+    <gap:platform name="symbian" />
+    <gap:platform name="blackberry" />
     <gap:platform name="winphone" />
     <!--<gap:plugin name="org.apache.cordova.battery-status" />
     <gap:plugin name="org.apache.cordova.camera" /> 
@@ -61,7 +66,7 @@
     <gap:plugin name="org.apache.cordova.media-capture" version="0.2.8" />
     <gap:plugin name="org.apache.cordova.network-information" version="0.2.7" />
     <gap:plugin name="org.apache.cordova.splashscreen" version="0.2.7" />
-    <gap:plugin name="org.apache.cordova.core.vibration" version="0.3.7" />
+    <gap:plugin name="org.apache.cordova.vibration" version="0.3.7" />
 
     <Feature name="Notification">
               <param name="android-package" value="org.apache.cordova.Notification" />
