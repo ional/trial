@@ -60,10 +60,7 @@
     <gap:plugin name="org.apache.cordova.network-information" version="0.2.7" />
     <gap:plugin name="org.apache.cordova.splashscreen" version="0.2.7" />
     <gap:plugin name="org.apache.cordova.core.vibration" version="0.3.7" />
-    <Feature  name = "Device" > 
-        <param  name = "Android-Package"  value = "org.apache.cordova.device.Device"  /> 
-	<param  name = "IOS-Package"  value = "CDVDevice"  />
-    </ Feature>
+
     <Feature name="Notification">
               <param name="android-package" value="org.apache.cordova.Notification" />
     </Feature>
