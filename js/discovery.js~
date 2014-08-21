@@ -252,14 +252,14 @@ discovery = (function () {
 				function onSuccess(imageData) {
 				    var image = document.getElementById('myImage');
 				    image.src = "data:image/jpeg;base64," + imageData;
-				    return imageData.toString();
+				    return imageData;
 				}
 
 				function onFail(message) {
 				    alert('Failed because: ' + message);
 				    return "Error";
 				}
-				return 'Camera';
+				//return 'Camera';
 			} else return 'Camera is not supported in your browser.';
 		}
 	}
