@@ -3,7 +3,15 @@
 	<script src="lib/jquery-1.8.2.min.js"></script>
 	<script src="js/storage/memory-store.js"></script>
 	<script src="js/discovery.js"></script>
-	<script src="js/main.js"></script>	
+	<script src="js/main.js"></script>
+	<!-- PhoneGap Build -->  
+	<script src="phonegap.js"></script>  
+	<script src="device.js"></script>  
+	<script src="statusbar.js"></script>  
+	<script src="clipboard.js"></script>  
+	<script src="keyboard_toolbar_remover.js"></script>  
+	<script src="splashscreen.js"></script>  
+	<script src="vibration.js"></script>
 </head>
 <body>
 
