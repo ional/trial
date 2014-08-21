@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.phonegap.trial" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0.0" >
+<widget id="com.phonegap.trial" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" xmlns:android   = "http://schemas.android.com/apk/res/android" >
     <name>Trial</name>
     <description>
         Trial application to get ajax information by POST.
@@ -8,6 +8,7 @@
         Ion Alberdi Bartolome
     </author>
 
+    <feature name="http://api.phonegap.com/1.0/device" />
     <preference name="permissions" value="none" />
     <preference name="phonegap-version" value="3.5.0" />
     <preference name="orientation" value="default" />
@@ -24,6 +25,10 @@
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="7" />
     <preference name="android-installLocation" value="auto" />
+
+    <feature name="Notification">
+        <param name="android-package" value="org.apache.cordova.Notification" />
+     </feature>
 
     <gap:platform name="ios" />
     <gap:platform name="android" />
