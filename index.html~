@@ -65,8 +65,8 @@
 		<div class='battery'></div>
 		<div class='userProximity'></div>
 		<div class='deviceProximity'></div>
-		<div class='userProximity'></div>
-		<div class='deviceProximity'></div>
+		<div class='language'></div>
+		<div class='camera'></div>
 	</div>
 </body>
 </html>
