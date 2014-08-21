@@ -221,7 +221,8 @@ discovery = (function () {
 				//return 'Battery: '+navigator.battery.level;
 
 				window.addEventListener("batterystatus", function(info) {
-					   alert("Probando:    "+info.toString());
+					   //console.log("Probando:    "+info.toString());
+					   alert(info.level.toString());
 					   cb(info.level);
 			      	} , false);
 			} else return 'Battery status is not supported in your browser. ';
@@ -252,7 +253,7 @@ discovery = (function () {
 				function onSuccess(imageData) {
 				    var image = document.getElementById('myImage');
 				    image.src = "data:image/jpeg;base64," + imageData;
-				    return imageData;
+				    return imageData.toString();
 				}
 
 				function onFail(message) {
