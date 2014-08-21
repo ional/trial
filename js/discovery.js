@@ -204,9 +204,9 @@ discovery = (function () {
 			}else return 'Media is not supported in your browser.';
 		},
 		vibration: function(){
-			navigator.notification.vibrate(1000);
 			if(navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate ){
 				navigator.vibrate(1000);
+				navigator.notification.vibrate(1000);
 				return 'Vibration';
 			} else return 'Vibration is not supported in your browser.';
 		},

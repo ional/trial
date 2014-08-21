@@ -11,6 +11,11 @@
     <feature name="http://api.phonegap.com/1.0/device" />
     <preference name="permissions" value="none" />
     <preference name="phonegap-version" value="3.5.0" />
+
+    <feature name="Notification">
+        <param name="android-package" value="org.apache.cordova.Notification" />
+    </feature>
+
     <preference name="orientation" value="default" />
     <preference name="target-device" value="universal" />
     <preference name="fullscreen" value="true" />
@@ -25,10 +30,6 @@
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="7" />
     <preference name="android-installLocation" value="auto" />
-
-    <feature name="Notification">
-        <param name="android-package" value="org.apache.cordova.Notification" />
-     </feature>
 
     <gap:platform name="ios" />
     <gap:platform name="android" />
