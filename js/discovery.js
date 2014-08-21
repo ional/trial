@@ -242,23 +242,24 @@ discovery = (function () {
 			} else return 'Language is not supported in your browser.';
 		},
 		camera: function(){
-			/*navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
-			    destinationType: Camera.DestinationType.DATA_URL
-			});
 
-			function onSuccess(imageData) {
-			    var image = document.getElementById('myImage');
-			    image.src = "data:image/jpeg;base64," + imageData;
-			    return imageData.toString();
-			}
-
-			function onFail(message) {
-			    alert('Failed because: ' + message);
-			    return "Error";
-			}*/
 			//return navigator.camera;
 			if(navigator.camera){
-				return 'Camera';
+				navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
+				        destinationType: Camera.DestinationType.DATA_URL
+				});
+
+				function onSuccess(imageData) {
+				    var image = document.getElementById('myImage');
+				    image.src = "data:image/jpeg;base64," + imageData;
+				    return imageData.toString();
+				}
+
+				function onFail(message) {
+				    alert('Failed because: ' + message);
+				    return "Error";
+				}
+				//return 'Camera';
 			} else return 'Camera is not supported in your browser.';
 		}
 	}
