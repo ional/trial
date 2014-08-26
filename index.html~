@@ -67,6 +67,7 @@
 		<div class='battery'></div>
 		<div class='language'></div>
 		<div class='camera'></div>
+
 		<div class='media'></div>
 		<div class='userProximity'></div>
 		<div class='deviceProximity'></div>

@@ -194,6 +194,11 @@ var app = {
 	console.log("discovery.deviceProximity() "+discovery.deviceProximity());*/
 
 	$(document).ready(function(){
+		discovery.devices(function(data1){console.log(data1); $('#javascrip .devices').append('<div>'+data1+'</div>');});
+		discovery.services(4,function(data2){console.log(data2); $('#javascrip .services').append('<br><div>'+data2+'</div>');});
+		discovery.actions(4, "RenderingControl",function(data3){console.log(data3); $('#javascrip .actions').append('<br><div>'+data3+'</div>');});
+		discovery.parameters(4, "RenderingControl", "SetVolume",function(data4){console.log(data4); $('#javascrip .parameters').append('<br><div>'+data4+'</div>');});
+		discovery.features(function(data5){console.log(data5); $('#javascrip .features').append('<br><div>Features:</div><br><div>'+data5+'</div>');});
 		var screen = discovery.screenSize();
 		var geolocation = discovery.geolocation();
 		var orientation = discovery.orientation();
