@@ -111,26 +111,26 @@ var app = {
 
 	$.get('http://localhost:8182/discoveragent/upnp/devices', function(data) {
 		//it works, do something with the data
-		$('#getnew .devices').append('<div>http://localhost:8182/discoveragent/upnp/devices</div><br><div>'+data+'</div>');
+		$('#getnew .devices').append('<div>http://localhost:8182/discoveragent/upnp/devices</div><br><div>'+JSON.stringify(data)+'</div>');
 	});
 
 	$.get('http://localhost:8182/discoveragent/upnp?devicedetails&device=4', function(data) {
 		//it works, do something with the data
-		$('#getnew .details').append('<br><div>http://localhost:8182/discoveragent/upnp/devicedetails&device=4</div><br><div>'+data+'</div>');
+		$('#getnew .details').append('<br><div>http://localhost:8182/discoveragent/upnp/devicedetails&device=4</div><br><div>'+JSON.stringify(data)+'</div>');
 	});
 	$.get('http://localhost:8182/discoveragent/upnp/services?device=4', function(data) {
 		//it works, do something with the data
-		$('#getnew .services').append('<br><div>http://localhost:8182/discoveragent/upnp/services?device=4</div><br><div>'+data+'</div>');
+		$('#getnew .services').append('<br><div>http://localhost:8182/discoveragent/upnp/services?device=4</div><br><div>'+JSON.stringify(data)+'</div>');
 	});
 
 	$.get('http://localhost:8182/discoveragent/upnp/actions?device=4&service=RenderingControl', function(data) {
 		//it works, do something with the data
-		$('#getnew .actions').append('<br><div>http://localhost:8182/discoveragent/upnp/actions?device=4&service=RenderingControl</div><br><div>'+data+'</div>');
+		$('#getnew .actions').append('<br><div>http://localhost:8182/discoveragent/upnp/actions?device=4&service=RenderingControl</div><br><div>'+JSON.stringify(data)+'</div>');
 	});
 
 	$.get('http://localhost:8182/discoveragent/upnp/parameters?device=4&service=RenderingControl&action=SetVolume', function(data) {
 		//it works, do something with the data
-		$('#getnew .parameters').append('<br><div>http://localhost:8182/discoveragent/upnp/parameters?device=4&service=RenderingControl&action=SetVolume</div><br><div>'+data+'</div>');
+		$('#getnew .parameters').append('<br><div>http://localhost:8182/discoveragent/upnp/parameters?device=4&service=RenderingControl&action=SetVolume</div><br><div>'+JSON.stringify(data)+'</div>');
 	});
 	/*$.ajax({
 		type: "POST",
@@ -206,7 +206,7 @@ var app = {
 		var camera = discovery.camera();
 
 		console.log(screen);
-		console.log(geolocation);
+		if(geolocation) console.log(geolocation);
 		console.log(orientation);
 		console.log(media);
 		console.log(vibration);
@@ -217,7 +217,7 @@ var app = {
 		console.log(camera);
 	
 		$('#javascrip .screenSize').append('<br><div>screen:</div><div>'+screen+'</div>');
-		$('#javascrip .geolocation').append('<br><div>geolocation:</div><br><div>'+geolocation+'</div>');
+		if(geolocation) $('#javascrip .geolocation').append('<br><div>geolocation:</div><br><div>'+geolocation+'</div>');
 		$('#javascrip .orientation').append('<br><div>orientation:</div><br><div>'+orientation+'</div>');
 		$('#javascrip .media').append('<br><div>media:</div><br><div>'+media+'</div>');
 		$('#javascrip .vibration').append('<br><div>vibration:</div><br><div>'+vibration+'</div>');

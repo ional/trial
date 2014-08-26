@@ -222,8 +222,8 @@ discovery = (function () {
 
 				window.addEventListener("batterystatus", function(info) {
 					   //console.log("Probando:    "+info.toString());
-					   alert(info.level.toString());
-					   cb(info.level);
+					   //alert(info.level.toString());
+					   return info.level.toString();
 			      	} , false);
 			} else return 'Battery status is not supported in your browser. ';
 		},
