@@ -157,6 +157,12 @@ discovery = (function () {
 				cb(data);
 			});
 		},
+		features: function(cb){
+		$.post('http://localhost:8182/discoveragent/upnp/features', function(data) {
+				//it works, do something with the data
+				cb(data);
+			});
+		},
 		screenSize: function(){
 			if(window.outerWidth && window.outerHeight){
 				var width = window.outerWidth;
