@@ -158,7 +158,7 @@ discovery = (function () {
 			});
 		},
 		features: function(cb){
-			$.post('http://localhost:8182/discoveragent/upnp/features', function(data) {
+			$.post('http://localhost:8182/discoveragent/features', function(data) {
 				//it works, do something with the data
 				cb(data);
 			});
