@@ -60,6 +60,8 @@
 		<div class='actions'></div>
 		<div class='parameters'></div>
 
+		<div class='features'></div>
+
 		<div class='screenSize'></div>
 		<div class='geolocation'></div>
 		<div class='orientation'></div>

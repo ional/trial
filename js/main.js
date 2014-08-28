@@ -193,12 +193,12 @@ var app = {
 	console.log("discovery.userProximity() "+discovery.userProximity());
 	console.log("discovery.deviceProximity() "+discovery.deviceProximity());*/
 
-	discovery.devices(function(data){console.log(data); $('#javascrip .devices').append('<div>'+data+'</div>');});
-	discovery.services(4,function(data){console.log(data); $('#javascrip .services').append('<br><div>'+data+'</div>');});
-	discovery.actions(4, "RenderingControl",function(data){console.log(data); $('#javascrip .actions').append('<br><div>'+data+'</div>');});
-	discovery.parameters(4, "RenderingControl", "SetVolume",function(data){console.log(data); $('#javascrip .parameters').append('<br><div>'+data+'</div>');});
-	discovery.geolocation(function(data){console.log(data); $('#javascrip .geolocation').append('<br><div>geolocation:</div><br><div>'+data+'</div>');});
-	discovery.features(function(data){console.log(data); $('#javascrip .features').append('<br><div>Features:</div><br><div>'+data+'</div>');});
+	discovery.devices(function(data1){console.log(data1); $('#javascrip .devices').append('<div>'+data1+'</div>');});
+	discovery.services(4,function(data2){console.log(data2); $('#javascrip .services').append('<br><div>'+data2+'</div>');});
+	discovery.actions(4, "RenderingControl",function(data3){console.log(data3); $('#javascrip .actions').append('<br><div>'+data3+'</div>');});
+	discovery.parameters(4, "RenderingControl", "SetVolume",function(data4){console.log(data4); $('#javascrip .parameters').append('<br><div>'+data4+'</div>');});
+	discovery.geolocation(function(data5){console.log(data5); $('#javascrip .geolocation').append('<br><div>geolocation:</div><br><div>'+data5+'</div>');});
+	discovery.features(function(data6){console.log(data6); $('#javascrip .features').append('<br><div>'+data6+'</div>');});
 
 	$(document).ready(function(){
 		var screen = discovery.screenSize();
